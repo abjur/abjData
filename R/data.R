@@ -46,3 +46,11 @@
 #'
 #' @source pnud_uf
 'pnud_uf'
+
+
+#' pnud_min
+#'
+#' @format pnud_min
+#'
+#' @source pnud_min
+'pnud_min'
