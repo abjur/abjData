@@ -9,4 +9,3 @@ get_cities_latlon()
 \description{
 Get cities lat and lon.
 }
-

@@ -12,4 +12,3 @@ ggplot_sf(sf)
 \description{
 plots a map from tidy map data.
 }
-

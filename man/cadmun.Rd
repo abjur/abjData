@@ -4,7 +4,9 @@
 \name{cadmun}
 \alias{cadmun}
 \title{cadmun}
-\format{cadmun}
+\format{
+cadmun
+}
 \source{
 cadmun
 }
@@ -15,4 +17,3 @@ cadmun
 cadmun
 }
 \keyword{datasets}
-

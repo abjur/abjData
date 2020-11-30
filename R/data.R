@@ -1,30 +1,13 @@
-#' br_uf_map
-#'
-#' @format br_uf_map
-#'
-#' @source br_uf_map
-'br_uf_map'
-
 #' cadmun
 #'
-#' @format cadmun
+#' Um conjunto de dados que contém os códigos de cadastro municipal.
 #'
+#' @format um data frame com 5657 e 35 variáveis.
+#'\describe{
+#'\item {MUNCOD}{...}}
 #' @source cadmun
 'cadmun'
 
-#' dados_aj
-#'
-#' @format dados_aj
-#'
-#' @source dados_aj
-'dados_aj'
-
-#' dados_muni
-#'
-#' @format dados_muni
-#'
-#' @source dados_muni
-'dados_muni'
 
 #' pnud_muni
 #'
@@ -35,7 +18,15 @@
 
 #' pnud_siglas
 #'
-#' @format pnud_siglas
+#' Um conjuto de dados que serve como glossário das siglas disponíveis.
+#'
+#' @format um data frame com 237 e 4 variáveis
+#' \describe{
+#' \item {sigla}{todas as siglas disponiveis}
+#' \item {nome curto}{nome curto da sigla}
+#' \item{nome longo}{nome longo da sigla}
+#' \item{definicao}{definicao da sigla}
+#' }
 #'
 #' @source pnud_siglas
 'pnud_siglas'

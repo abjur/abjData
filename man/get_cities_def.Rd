@@ -9,4 +9,3 @@ get_cities_def()
 \description{
 Get cities info.
 }
-

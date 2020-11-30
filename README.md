@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/abjur/abjData/workflows/R-CMD-check/badge.svg)](https://github.com/abjur/abjData/actions)
 <!-- badges: end -->
 
 ## Visão Geral
@@ -40,13 +42,13 @@ remotes::install_github("abjur/abjutils")
 
 ## Bases disponíveis
 
-| Base          | Descrição |
-| ------------- | --------- |
-| `cadmun`      | Todo      |
-| `pnud_min`    | Todo      |
-| `pnud_muni`   | Todo      |
-| `pnud_siglas` | Todo      |
-| `pnud_uf`     | Todo      |
+| Base          | Descrição                                                            |
+| ------------- | -------------------------------------------------------------------- |
+| `cadmun`      | Um conjunto de dados que contém os códigos de cadastro municipal.    |
+| `pnud_min`    | TODO                                                                 |
+| `pnud_muni`   | TODO                                                                 |
+| `pnud_siglas` | Um conjuto de dados que serve como glossário das siglas disponíveis. |
+| `pnud_uf`     | TODO                                                                 |
 
 ## Uso
 
@@ -73,17 +75,21 @@ glimpse(pnud_siglas)
 #> $ definicao  <chr> "Código utilizado pelo IBGE para identificação do estado."…
 ```
 
+### Exemplo de Gráfico
+
 ``` r
 pnud_min%>%
-  filter(idhm > 0.800) %>%
+  filter(idhm > 0.700) %>%
   ggplot() +
-  geom_boxplot(aes(uf, ano, fill = uf)) +
+  geom_boxplot(aes(regiao, idhm_e), colour = "#102C68") +
   theme(legend.position = "none") +
-  labs(title = "IDHM", subtitle = "Estados com faixa de desenvolvimento muito alto", y = "uf", x = "população")
+  theme_minimal() +
+  labs(title = "IDHM educação por Regiões", y = "IDHM", x = "Regiões")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" /> \#\#
-Requisitos
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+## Requisitos
 
 `{abjuData}` requer uma versão do R superior ou igual a 3.6.
 

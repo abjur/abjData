@@ -4,7 +4,9 @@
 \name{pnud_uf}
 \alias{pnud_uf}
 \title{pnud_uf}
-\format{pnud_uf}
+\format{
+pnud_uf
+}
 \source{
 pnud_uf
 }
@@ -15,4 +17,3 @@ pnud_uf
 pnud_uf
 }
 \keyword{datasets}
-

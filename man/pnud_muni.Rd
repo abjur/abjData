@@ -4,7 +4,9 @@
 \name{pnud_muni}
 \alias{pnud_muni}
 \title{pnud_muni}
-\format{pnud_muni}
+\format{
+pnud_muni
+}
 \source{
 pnud_muni
 }
@@ -15,4 +17,3 @@ pnud_muni
 pnud_muni
 }
 \keyword{datasets}
-

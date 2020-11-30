@@ -17,4 +17,3 @@ Gets fortified map from IBGE
 \seealso{
 \url{ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/}
 }
-

@@ -78,24 +78,88 @@
 <div id="visão-geral" class="section level2">
 <h2 class="hasAnchor">
 <a href="#vis%C3%A3o-geral" class="anchor"></a>Visão Geral</h2>
-<p>Esse pacote contém bases de dados utilizadas corriqueiramente pela Associação Brasileira de Jurimetria.</p>
+<p>Esse pacote contém conjunto de bases de dados utilizadas corriqueiramente pela Associação Brasileira de Jurimetria.</p>
+<p>Os dados incluidos são provenientes de fontes relacionadas ao Indíce de Desenvolvimento Humano das Ufs coletados a partir do <a href="http://www.atlasbrasil.org.br/">Atlas do Desenvolvimento Humano</a>, ao banco de dados do “Sistema de Estatísticas do Poder Judiciário”, <a href="https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/base-de-dados/e%20as">Portaria N° 216</a> e <a href="ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/">bases de dados cartograficas</a>.</p>
+<p>O pacote fornece elevado processamento de dados, o objetivo é agregar dados de estrutura territorial do ranking do IDHM regional e nacional nas pesquisas e relatórios.</p>
 </div>
 <div id="para-instalar" class="section level2">
 <h2 class="hasAnchor">
 <a href="#para-instalar" class="anchor"></a>Para Instalar</h2>
 <p>Você pode instalar a versão mais recente do <code>{abjData}</code> com:</p>
+<p>Para instalar a partir do endereço de um dos repositórios você precisa ter o pacote <code>remotes</code> instalado.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="co"># Para instalar a versão GitHub (dev)</span>
+<span class="co"># Para instalar pacote remotes</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
+<span class="co"># Para instalar a versão GitHub (dev)</span>
 <span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"abjur/abjutils"</span><span class="op">)</span></pre></div>
 </div>
 <div id="bases-disponíveis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#bases-dispon%C3%ADveis" class="anchor"></a>Bases disponíveis</h2>
+<table class="table">
+<colgroup>
+<col width="16%">
+<col width="83%">
+</colgroup>
+<thead><tr class="header">
+<th>Base</th>
+<th>Descrição</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><code>cadmun</code></td>
+<td>Um conjunto de dados que contém os códigos de cadastro municipal.</td>
+</tr>
+<tr class="even">
+<td><code>pnud_min</code></td>
+<td>TODO</td>
+</tr>
+<tr class="odd">
+<td><code>pnud_muni</code></td>
+<td>TODO</td>
+</tr>
+<tr class="even">
+<td><code>pnud_siglas</code></td>
+<td>Um conjuto de dados que serve como glossário das siglas disponíveis.</td>
+</tr>
+<tr class="odd">
+<td><code>pnud_uf</code></td>
+<td>TODO</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="exemplo-de-uso" class="section level2">
+<div id="uso" class="section level2">
 <h2 class="hasAnchor">
-<a href="#exemplo-de-uso" class="anchor"></a>Exemplo de uso</h2>
+<a href="#uso" class="anchor"></a>Uso</h2>
+<p>Depois de instalado, basta carregar o pacote e chamar o conjunto de dados que deseja usar.</p>
+<p>O pacote <code>{abjuData}</code> pode ser carregado como qualquer outro pacote de R:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">abjData</span><span class="op">)</span> <span class="co"># Carrega o pacote</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">pnud_siglas</span><span class="op">)</span>
+<span class="co">#&gt; Rows: 237</span>
+<span class="co">#&gt; Columns: 4</span>
+<span class="co">#&gt; $ sigla      &lt;chr&gt; "uf", "ufn", "codmun6", "codmun7", "nomemun", "espvida", "…</span>
+<span class="co">#&gt; $ nome_curto &lt;chr&gt; "Código da Unidade da Federação", "Nome da Unidade da Fede…</span>
+<span class="co">#&gt; $ nome_longo &lt;chr&gt; "Código da Unidade da Federação", "Nome da Unidade da Fede…</span>
+<span class="co">#&gt; $ definicao  &lt;chr&gt; "Código utilizado pelo IBGE para identificação do estado."…</span></pre></div>
+<div id="exemplo-de-gráfico" class="section level3">
+<h3 class="hasAnchor">
+<a href="#exemplo-de-gr%C3%A1fico" class="anchor"></a>Exemplo de Gráfico</h3>
+<div class="sourceCode" id="cb4"><pre class="downlit">
+<span class="va">pnud_min</span><span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">idhm</span> <span class="op">&gt;</span> <span class="fl">0.700</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">regiao</span>, <span class="va">idhm_e</span><span class="op">)</span>, colour <span class="op">=</span> <span class="st">"#102C68"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"IDHM educação por Regiões"</span>, y <span class="op">=</span> <span class="st">"IDHM"</span>, x <span class="op">=</span> <span class="st">"Regiões"</span><span class="op">)</span></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-5-1.png" width="100%"></p>
+</div>
 </div>
 <div id="requisitos" class="section level2">
 <h2 class="hasAnchor">
