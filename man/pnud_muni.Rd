@@ -5,15 +5,16 @@
 \alias{pnud_muni}
 \title{pnud_muni}
 \format{
-pnud_muni
+um data frame com 16695 linhas e 238 variáveis:
+\describe{mais informações consulte a pnud_siglas}
 }
 \source{
-pnud_muni
+\url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 }
 \usage{
 pnud_muni
 }
 \description{
-pnud_muni
+Um conjunto de dados que contém informações sobre PNUD de municípios.
 }
 \keyword{datasets}

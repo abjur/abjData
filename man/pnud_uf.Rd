@@ -5,15 +5,16 @@
 \alias{pnud_uf}
 \title{pnud_uf}
 \format{
-pnud_uf
+um data frame com 81 linhas e 235 variáveis:
+\describe{mais informações consulte a pnud_siglas}
 }
 \source{
-pnud_uf
+\url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}
 }
 \usage{
 pnud_uf
 }
 \description{
-pnud_uf
+Um conjunto de dados que contém informações sobre PNUD de Unidades Federativas.
 }
 \keyword{datasets}

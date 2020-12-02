@@ -26,10 +26,10 @@
 #'
 #' @format um data frame com 237 e 4 variáveis:
 #' \describe{
-#' \item {sigla}{todas as siglas disponiveis}
-#' \item {nome curto}{nome curto da sigla}
-#' \item{nome longo}{nome longo da sigla}
-#' \item{definicao}{definicao da sigla}
+#'\item{sigla}{todas as siglas disponiveis}
+#'\item{nome curto}{nome curto da sigla}
+#'\item{nome longo}{nome longo da sigla}
+#'\item{definicao}{definicao da sigla}
 #' }
 #'
 #' @source pnud_siglas

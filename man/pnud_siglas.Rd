@@ -5,7 +5,13 @@
 \alias{pnud_siglas}
 \title{pnud_siglas}
 \format{
-pnud_siglas
+um data frame com 237 e 4 variáveis:
+\describe{
+\item{sigla}{todas as siglas disponiveis}
+\item{nome curto}{nome curto da sigla}
+\item{nome longo}{nome longo da sigla}
+\item{definicao}{definicao da sigla}
+}
 }
 \source{
 pnud_siglas
@@ -14,6 +20,6 @@ pnud_siglas
 pnud_siglas
 }
 \description{
-pnud_siglas
+Um conjuto de dados que serve como glossário das siglas disponíveis.
 }
 \keyword{datasets}

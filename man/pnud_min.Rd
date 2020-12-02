@@ -5,15 +5,15 @@
 \alias{pnud_min}
 \title{pnud_min}
 \format{
-pnud_min
+um data frame com 16686 linhas e 14 variáveis:
 }
 \source{
-pnud_min
+@source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 }
 \usage{
 pnud_min
 }
 \description{
-pnud_min
+Um conjunto de dados que contém informações sobre PNUD de municípios por anos.
 }
 \keyword{datasets}
