@@ -1,4 +1,4 @@
 template:
   params:
-    bootswatch: flatly
+    bootswatch: yeti
     ganalytics: UA-182605574-1

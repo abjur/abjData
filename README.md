@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# abjData
+# abjData <a href='http://abjur.github.io/abjutils/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 <!-- badges: start -->
 
@@ -42,13 +42,13 @@ remotes::install_github("abjur/abjutils")
 
 ## Bases disponíveis
 
-| Base          | Descrição                                                            |
-| ------------- | -------------------------------------------------------------------- |
-| `cadmun`      | Um conjunto de dados que contém os códigos de cadastro municipal.    |
-| `pnud_min`    | TODO                                                                 |
-| `pnud_muni`   | TODO                                                                 |
-| `pnud_siglas` | Um conjuto de dados que serve como glossário das siglas disponíveis. |
-| `pnud_uf`     | TODO                                                                 |
+| Base          | Descrição                                                                       |
+| ------------- | ------------------------------------------------------------------------------- |
+| `cadmun`      | Um conjunto de dados que contém os códigos de cadastro municipal.               |
+| `pnud_min`    | Um conjunto de dados que contém informações sobre PNUD de municípios            |
+| `pnud_muni`   | Um conjunto de dados que contém informações sobre PNUD de municípios por anos.  |
+| `pnud_siglas` | Um conjuto de dados que serve como glossário das siglas disponíveis.            |
+| `pnud_uf`     | Um conjunto de dados que contém informações sobre PNUD de Unidades Federativas. |
 
 ## Uso
 
