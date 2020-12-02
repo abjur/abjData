@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 Esse pacote contém conjunto de bases de dados utilizadas corriqueiramente pela Associação Brasileira de Jurimetria.
  
-Os dados incluidos são provenientes de fontes relacionadas ao Indíce de Desenvolvimento Humano das Ufs coletados a partir do [Atlas do Desenvolvimento Humano](http://www.atlasbrasil.org.br/), ao banco de dados do “Sistema de Estatísticas do Poder Judiciário”, [Portaria N° 216](https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/base-de-dados/e as) e [bases de dados cartograficas](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
+Os dados incluídos são provenientes de fontes relacionadas ao Índice de Desenvolvimento Humano das Ufs coletados a partir do [Atlas do Desenvolvimento Humano](http://www.atlasbrasil.org.br/), ao banco de dados do “Sistema de Estatísticas do Poder Judiciário”, [Portaria N° 216](https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/base-de-dados/e as) e [bases de dados cartograficas](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
 
 O pacote fornece elevado processamento de dados, o objetivo é agregar dados de estrutura territorial do ranking do IDHM regional e nacional nas pesquisas e relatórios.
 

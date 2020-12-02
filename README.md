@@ -14,7 +14,7 @@ status](https://github.com/abjur/abjData/workflows/R-CMD-check/badge.svg)](https
 Esse pacote contém conjunto de bases de dados utilizadas
 corriqueiramente pela Associação Brasileira de Jurimetria.
 
-Os dados incluidos são provenientes de fontes relacionadas ao Indíce de
+Os dados incluídos são provenientes de fontes relacionadas ao Índice de
 Desenvolvimento Humano das Ufs coletados a partir do [Atlas do
 Desenvolvimento Humano](http://www.atlasbrasil.org.br/), ao banco de
 dados do “Sistema de Estatísticas do Poder Judiciário”, [Portaria
