@@ -81,7 +81,7 @@ pnud_min%>%
 
 ## Requisitos 
 
-`{abjuData}` requer uma versão do R superior ou igual a 3.6. 
+`{abjuData}` requer uma versão do R superior ou igual a 3.3.1
 
 ## Licença  
 
