@@ -1,6 +1,6 @@
 Package: abjData
 Title: Databases used routinely by the Brazilian Jurimetrics Association
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     c(person(given = "Julio",
              family = "Trecenti",
