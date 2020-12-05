@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# abjData <a href='http://abjur.github.io/abjutils/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# abjData <a href='http://abjur.github.io/abjData/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 <!-- badges: start -->
 
@@ -9,29 +9,23 @@
 status](https://github.com/abjur/abjData/workflows/R-CMD-check/badge.svg)](https://github.com/abjur/abjData/actions)
 <!-- badges: end -->
 
-## Visão Geral
+## Visão geral
 
-Esse pacote contém conjunto de bases de dados utilizadas
-corriqueiramente pela Associação Brasileira de Jurimetria.
+Esse pacote contém conjunto de bases de dados utilizadas frequentemente
+pela Associação Brasileira de Jurimetria.
 
-Os dados incluídos são provenientes de fontes relacionadas ao Índice de
-Desenvolvimento Humano das Ufs coletados a partir do [Atlas do
-Desenvolvimento Humano](http://www.atlasbrasil.org.br/), ao banco de
-dados do “Sistema de Estatísticas do Poder Judiciário”, [Portaria
-N° 216](https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/base-de-dados/e%20as)
-e [bases de dados
+Os dados incluídos são provenientes do Índice de Desenvolvimento Humano
+dos municípios, coletados a partir do [Atlas do Desenvolvimento
+Humano](http://www.atlasbrasil.org.br/) e [bases de dados
 cartograficas](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
 
-O pacote fornece elevado processamento de dados, o objetivo é agregar
-dados de estrutura territorial do ranking do IDHM regional e nacional
-nas pesquisas e relatórios.
+O objetivo do pacote é disponibilizar bases de dados para utilização
+rápida em outros projetos.
 
-## Para Instalar
-
-Você pode instalar a versão mais recente do `{abjData}` com:
+## Para instalar
 
 Para instalar a partir do endereço de um dos repositórios você precisa
-ter o pacote `remotes` instalado.
+ter o pacote `{remotes}` instalado.
 
 ``` r
 # Para instalar pacote remotes
@@ -43,10 +37,11 @@ remotes::install_github("abjur/abjutils")
 ## Bases disponíveis
 
 | Base          | Descrição                                                                       |
-| ------------- | ------------------------------------------------------------------------------- |
-| `cadmun`      | Um conjunto de dados que contém os códigos de cadastro municipal.               |
-| `pnud_min`    | Um conjunto de dados que contém informações sobre PNUD de municípios            |
+|---------------|---------------------------------------------------------------------------------|
+| `cadmun`      | (LEGADO) Um conjunto de dados que contém os códigos de cadastro municipal.      |
+| `muni`        | Dados úteis de municípios para fazer join com outras bases.                     |
 | `pnud_muni`   | Um conjunto de dados que contém informações sobre PNUD de municípios por anos.  |
+| `pnud_min`    | Base minimal do PNUD municípios para fazer análises rápidas                     |
 | `pnud_siglas` | Um conjuto de dados que serve como glossário das siglas disponíveis.            |
 | `pnud_uf`     | Um conjunto de dados que contém informações sobre PNUD de Unidades Federativas. |
 
@@ -55,14 +50,11 @@ remotes::install_github("abjur/abjutils")
 Depois de instalado, basta carregar o pacote e chamar o conjunto de
 dados que deseja usar.
 
-O pacote `{abjuData}` pode ser carregado como qualquer outro pacote de
-R:
+O pacote `{abjData}` pode ser carregado como qualquer outro pacote de R:
 
 ``` r
 library(abjData) # Carrega o pacote
-library(ggplot2)
-library(dplyr)
-library(magrittr)
+library(tidyverse)
 ```
 
 ``` r
@@ -75,26 +67,57 @@ glimpse(pnud_siglas)
 #> $ definicao  <chr> "Código utilizado pelo IBGE para identificação do estado."…
 ```
 
-### Exemplo de Gráfico
+### Exemplos de gráfico
+
+IDH-Municipal:
 
 ``` r
-pnud_min%>%
-  filter(idhm > 0.700) %>%
+pnud_min %>%
+  pivot_longer(starts_with("idhm")) %>% 
+  mutate(tipo = case_when(
+    name == "idhm" ~ "Geral",
+    name == "idhm_e" ~ "Educação",
+    name == "idhm_l" ~ "Longevidade",
+    name == "idhm_r" ~ "Renda"
+  )) %>% 
+  mutate(
+    regiao_nm = fct_reorder(regiao_nm, value, median, .desc = TRUE),
+    tipo = lvls_reorder(tipo, c(2, 1, 3, 4))
+  ) %>% 
   ggplot() +
-  geom_boxplot(aes(regiao, idhm_e), colour = "#102C68") +
+  geom_boxplot(
+    aes(value, regiao_nm), 
+    colour = "#102C68", 
+    fill = "#7AD151"
+  ) +
+  facet_wrap(~tipo) +
   theme(legend.position = "none") +
-  theme_minimal() +
-  labs(title = "IDHM educação por Regiões", y = "IDHM", x = "Regiões")
+  theme_bw(12) +
+  labs(
+    x = "IDHM", 
+    y = "Região"
+  )
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+![](man/figures/README-fig-idhm-1.png)<!-- -->
+
+Posição dos municípios:
+
+``` r
+muni %>% 
+  ggplot(aes(lon, lat)) +
+  geom_point(size = .1, colour = viridis::viridis(2, begin = .2, end = .8)[1]) +
+  coord_equal() +
+  theme_void()
+```
+
+![](man/figures/README-unnamed-chunk-5-1.png)<!-- -->
 
 ## Requisitos
 
-`{abjuData}` requer uma versão do R superior ou igual a 3.3.1
+`{abjData}` requer uma versão do R superior ou igual a 3.4
 
 ## Licença
 
-O sistema de gerenciamento de conteúdo `{abjData}` é licenciado sob os
-termos da [MIT + file
-LICENSE](https://github.com/abjur/abjData/blob/master/LICENSE)
+O `{abjData}` é licenciado sob os termos
+[MIT](https://github.com/abjur/abjData/blob/master/LICENSE).

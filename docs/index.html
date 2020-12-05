@@ -22,7 +22,7 @@
     English, see &lt;https://abj.org.br/&gt; for more information) is
     a non-profit organization which aims to investigate and promote the
     use of statistics and probability in the study of Law and its
-    institutions. This package is a set of cases commonly used by
+    institutions. This package has a set of datasets commonly used by
      ABJ, assisting in research analysis.">
 <meta property="og:image" content="/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -79,22 +79,21 @@
   <div class="contents col-md-9">
 <div id="abjdata-" class="section level1">
 <div class="page-header"><h1 class="hasAnchor">
-<a href="#abjdata-" class="anchor"></a>abjData <a href="http://abjur.github.io/abjutils/"><img src="reference/figures/logo.png" align="right" height="138.5"></a>
+<a href="#abjdata-" class="anchor"></a>abjData <a href="http://abjur.github.io/abjData/"><img src="reference/figures/logo.png" align="right" height="138.5"></a>
 </h1></div>
 <!-- badges: start -->
 
 <div id="visão-geral" class="section level2">
 <h2 class="hasAnchor">
-<a href="#vis%C3%A3o-geral" class="anchor"></a>Visão Geral</h2>
-<p>Esse pacote contém conjunto de bases de dados utilizadas corriqueiramente pela Associação Brasileira de Jurimetria.</p>
-<p>Os dados incluidos são provenientes de fontes relacionadas ao Indíce de Desenvolvimento Humano das Ufs coletados a partir do <a href="http://www.atlasbrasil.org.br/">Atlas do Desenvolvimento Humano</a>, ao banco de dados do “Sistema de Estatísticas do Poder Judiciário”, <a href="https://www.cnj.jus.br/pesquisas-judiciarias/justica-em-numeros/base-de-dados/e%20as">Portaria N° 216</a> e <a href="ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/">bases de dados cartograficas</a>.</p>
-<p>O pacote fornece elevado processamento de dados, o objetivo é agregar dados de estrutura territorial do ranking do IDHM regional e nacional nas pesquisas e relatórios.</p>
+<a href="#vis%C3%A3o-geral" class="anchor"></a>Visão geral</h2>
+<p>Esse pacote contém conjunto de bases de dados utilizadas frequentemente pela Associação Brasileira de Jurimetria.</p>
+<p>Os dados incluídos são provenientes do Índice de Desenvolvimento Humano dos municípios, coletados a partir do <a href="http://www.atlasbrasil.org.br/">Atlas do Desenvolvimento Humano</a> e <a href="ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/">bases de dados cartograficas</a>.</p>
+<p>O objetivo do pacote é disponibilizar bases de dados para utilização rápida em outros projetos.</p>
 </div>
 <div id="para-instalar" class="section level2">
 <h2 class="hasAnchor">
-<a href="#para-instalar" class="anchor"></a>Para Instalar</h2>
-<p>Você pode instalar a versão mais recente do <code>{abjData}</code> com:</p>
-<p>Para instalar a partir do endereço de um dos repositórios você precisa ter o pacote <code>remotes</code> instalado.</p>
+<a href="#para-instalar" class="anchor"></a>Para instalar</h2>
+<p>Para instalar a partir do endereço de um dos repositórios você precisa ter o pacote <a href="https://remotes.r-lib.org">remotes</a> instalado.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
 <span class="co"># Para instalar pacote remotes</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
@@ -106,8 +105,8 @@
 <a href="#bases-dispon%C3%ADveis" class="anchor"></a>Bases disponíveis</h2>
 <table class="table">
 <colgroup>
-<col width="14%">
-<col width="85%">
+<col width="15%">
+<col width="84%">
 </colgroup>
 <thead><tr class="header">
 <th>Base</th>
@@ -116,21 +115,25 @@
 <tbody>
 <tr class="odd">
 <td><code>cadmun</code></td>
-<td>Um conjunto de dados que contém os códigos de cadastro municipal.</td>
+<td>(LEGADO) Um conjunto de dados que contém os códigos de cadastro municipal.</td>
 </tr>
 <tr class="even">
-<td><code>pnud_min</code></td>
-<td>Um conjunto de dados que contém informações sobre PNUD de municípios</td>
+<td><code>muni</code></td>
+<td>Dados úteis de municípios para fazer join com outras bases.</td>
 </tr>
 <tr class="odd">
 <td><code>pnud_muni</code></td>
 <td>Um conjunto de dados que contém informações sobre PNUD de municípios por anos.</td>
 </tr>
 <tr class="even">
+<td><code>pnud_min</code></td>
+<td>Base minimal do PNUD municípios para fazer análises rápidas</td>
+</tr>
+<tr class="odd">
 <td><code>pnud_siglas</code></td>
 <td>Um conjuto de dados que serve como glossário das siglas disponíveis.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>pnud_uf</code></td>
 <td>Um conjunto de dados que contém informações sobre PNUD de Unidades Federativas.</td>
 </tr>
@@ -141,43 +144,68 @@
 <h2 class="hasAnchor">
 <a href="#uso" class="anchor"></a>Uso</h2>
 <p>Depois de instalado, basta carregar o pacote e chamar o conjunto de dados que deseja usar.</p>
-<p>O pacote <code>{abjuData}</code> pode ser carregado como qualquer outro pacote de R:</p>
+<p>O pacote <code>{abjData}</code> pode ser carregado como qualquer outro pacote de R:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">abjData</span><span class="op">)</span> <span class="co"># Carrega o pacote</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://magrittr.tidyverse.org">magrittr</a></span><span class="op">)</span></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></pre></div>
 <div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="fu"><a href="https://tibble.tidyverse.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">pnud_siglas</span><span class="op">)</span>
+<span class="fu">glimpse</span><span class="op">(</span><span class="va">pnud_siglas</span><span class="op">)</span>
 <span class="co">#&gt; Rows: 237</span>
 <span class="co">#&gt; Columns: 4</span>
 <span class="co">#&gt; $ sigla      &lt;chr&gt; "uf", "ufn", "codmun6", "codmun7", "nomemun", "espvida", "…</span>
 <span class="co">#&gt; $ nome_curto &lt;chr&gt; "Código da Unidade da Federação", "Nome da Unidade da Fede…</span>
 <span class="co">#&gt; $ nome_longo &lt;chr&gt; "Código da Unidade da Federação", "Nome da Unidade da Fede…</span>
 <span class="co">#&gt; $ definicao  &lt;chr&gt; "Código utilizado pelo IBGE para identificação do estado."…</span></pre></div>
-<div id="exemplo-de-gráfico" class="section level3">
+<div id="exemplos-de-gráfico" class="section level3">
 <h3 class="hasAnchor">
-<a href="#exemplo-de-gr%C3%A1fico" class="anchor"></a>Exemplo de Gráfico</h3>
+<a href="#exemplos-de-gr%C3%A1fico" class="anchor"></a>Exemplos de gráfico</h3>
+<p>IDH-Municipal:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
-<span class="va">pnud_min</span><span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">idhm</span> <span class="op">&gt;</span> <span class="fl">0.700</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">regiao</span>, <span class="va">idhm_e</span><span class="op">)</span>, colour <span class="op">=</span> <span class="st">"#102C68"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"IDHM educação por Regiões"</span>, y <span class="op">=</span> <span class="st">"IDHM"</span>, x <span class="op">=</span> <span class="st">"Regiões"</span><span class="op">)</span></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-5-1.png" width="100%"></p>
+<span class="va">pnud_min</span> <span class="op">%&gt;%</span>
+  <span class="fu">pivot_longer</span><span class="op">(</span><span class="fu">starts_with</span><span class="op">(</span><span class="st">"idhm"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu">mutate</span><span class="op">(</span>tipo <span class="op">=</span> <span class="fu">case_when</span><span class="op">(</span>
+    <span class="va">name</span> <span class="op">==</span> <span class="st">"idhm"</span> <span class="op">~</span> <span class="st">"Geral"</span>,
+    <span class="va">name</span> <span class="op">==</span> <span class="st">"idhm_e"</span> <span class="op">~</span> <span class="st">"Educação"</span>,
+    <span class="va">name</span> <span class="op">==</span> <span class="st">"idhm_l"</span> <span class="op">~</span> <span class="st">"Longevidade"</span>,
+    <span class="va">name</span> <span class="op">==</span> <span class="st">"idhm_r"</span> <span class="op">~</span> <span class="st">"Renda"</span>
+  <span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu">mutate</span><span class="op">(</span>
+    regiao_nm <span class="op">=</span> <span class="fu">fct_reorder</span><span class="op">(</span><span class="va">regiao_nm</span>, <span class="va">value</span>, <span class="va">median</span>, .desc <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>,
+    tipo <span class="op">=</span> <span class="fu">lvls_reorder</span><span class="op">(</span><span class="va">tipo</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span>
+  <span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu">ggplot</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_boxplot</span><span class="op">(</span>
+    <span class="fu">aes</span><span class="op">(</span><span class="va">value</span>, <span class="va">regiao_nm</span><span class="op">)</span>, 
+    colour <span class="op">=</span> <span class="st">"#102C68"</span>, 
+    fill <span class="op">=</span> <span class="st">"#7AD151"</span>
+  <span class="op">)</span> <span class="op">+</span>
+  <span class="fu">facet_wrap</span><span class="op">(</span><span class="op">~</span><span class="va">tipo</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">theme_bw</span><span class="op">(</span><span class="fl">12</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">labs</span><span class="op">(</span>
+    x <span class="op">=</span> <span class="st">"IDHM"</span>, 
+    y <span class="op">=</span> <span class="st">"Região"</span>
+  <span class="op">)</span></pre></div>
+<p><img src="reference/figures/README-fig-idhm-1.png"><!-- --></p>
+<p>Posição dos municípios:</p>
+<div class="sourceCode" id="cb5"><pre class="downlit">
+<span class="va">muni</span> <span class="op">%&gt;%</span> 
+  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span><span class="va">lon</span>, <span class="va">lat</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_point</span><span class="op">(</span>size <span class="op">=</span> <span class="fl">.1</span>, colour <span class="op">=</span> <span class="fu">viridis</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/viridisLite/man/viridis.html">viridis</a></span><span class="op">(</span><span class="fl">2</span>, begin <span class="op">=</span> <span class="fl">.2</span>, end <span class="op">=</span> <span class="fl">.8</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">coord_equal</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">theme_void</span><span class="op">(</span><span class="op">)</span></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-5-1.png"><!-- --></p>
 </div>
 </div>
 <div id="requisitos" class="section level2">
 <h2 class="hasAnchor">
 <a href="#requisitos" class="anchor"></a>Requisitos</h2>
-<p><code>{abjuData}</code> requer uma versão do R superior ou igual a 3.6.</p>
+<p><code>{abjData}</code> requer uma versão do R superior ou igual a 3.4</p>
 </div>
 <div id="licença" class="section level2">
 <h2 class="hasAnchor">
 <a href="#licen%C3%A7a" class="anchor"></a>Licença</h2>
-<p>O sistema de gerenciamento de conteúdo <code>{abjData}</code> é licenciado sob os termos da <a href="https://github.com/abjur/abjData/blob/master/LICENSE">MIT + file LICENSE</a></p>
+<p>O <code>{abjData}</code> é licenciado sob os termos <a href="https://github.com/abjur/abjData/blob/master/LICENSE">MIT</a>.</p>
 </div>
 </div>
   </div>
@@ -194,7 +222,7 @@
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Julio Trecenti <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-1680-6389" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Julio Trecenti <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-1680-6389" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Renata Hirota <br><small class="roles"> Author </small>  </li>
 <li>Associação Brasileira de Jurimetria <br><small class="roles"> Copyright holder, funder </small>  </li>
 <li><a href="authors.html">All authors...</a></li>

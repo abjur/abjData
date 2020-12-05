@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>pnud_min — pnud_min • abjData</title>
+<title>muni — muni • abjData</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,10 @@
 
 
 
-<meta property="og:title" content="pnud_min — pnud_min" />
-<meta property="og:description" content="Um conjunto de dados que contém informações sobre PNUD de municípios por anos." />
+<meta property="og:title" content="muni — muni" />
+<meta property="og:description" content="Um conjunto de dados que contem dados uteis para fazer join
+com bases de municipios, como codigos dos municipios, codigo tse,
+sigla/nome/codigo das UFs e regiao." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -121,28 +123,46 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>pnud_min</h1>
+    <h1>muni</h1>
     
-    <div class="hidden name"><code>pnud_min.Rd</code></div>
+    <div class="hidden name"><code>muni.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Um conjunto de dados que contém informações sobre PNUD de municípios por anos.</p>
+    <p>Um conjunto de dados que contem dados uteis para fazer join
+com bases de municipios, como codigos dos municipios, codigo tse,
+sigla/nome/codigo das UFs e regiao.</p>
     </div>
 
-    <pre class="usage"><span class='va'>pnud_min</span></pre>
+    <pre class="usage"><span class='va'>muni</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>um data frame com 16686 linhas e 14 variaveis.</p>
+    <p>um data frame com 5572 linhas e 16 colunas:</p>
 <dl>
+  <dt>muni_id</dt><dd><p>codigo IBGE (7 digitos).</p></dd>
+  <dt>muni_id_6</dt><dd><p>codigo IBGE (6 digitos).</p></dd>
+  <dt>muni_nm</dt><dd><p>nome do municipio (original IBGE).</p></dd>
+  <dt>muni_nm_clean</dt><dd><p>nome do municipio limpo (sem acentos, caixa alta).</p></dd>
+  <dt>uf_nm</dt><dd><p>nome da UF original.</p></dd>
+  <dt>uf_sigla</dt><dd><p>sigla da UF.</p></dd>
+  <dt>uf_id</dt><dd><p>codigo IBGE da UF.</p></dd>
+  <dt>regiao_nm</dt><dd><p>nome da regiao.</p></dd>
+  <dt>tse_id</dt><dd><p>codigo TSE do municipio.</p></dd>
+  <dt>rf_id</dt><dd><p>codigo Receita Federal do municipio.</p></dd>
+  <dt>bcb_id</dt><dd><p>codigo do Banco Central do Brasil do municipio.</p></dd>
+  <dt>existia_1991</dt><dd><p>1 se municipio existia em 1991, 0 caso contrario.</p></dd>
+  <dt>existia_2000</dt><dd><p>1 se municipio existia em 2000, 0 caso contrario.</p></dd>
+  <dt>existia_2010</dt><dd><p>1 se municipio existia em 2010, 0 caso contrario.</p></dd>
+  <dt>lon</dt><dd><p>longitude baseada no centroide do shapefile.</p></dd>
+  <dt>lat</dt><dd><p>latitude baseada no centroide do shapefile.</p></dd>
 
 </dl>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>@source <a href='https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html'>https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html</a></p>
+    <p>base do pacote geobr enriquecida com dados do TSE e centroides</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
