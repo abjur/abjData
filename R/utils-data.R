@@ -90,5 +90,5 @@
 #'
 #' \describe{mais informações consulte a pnud_siglas}
 #'
-#' @source @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
+#' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 'pnud_min'
