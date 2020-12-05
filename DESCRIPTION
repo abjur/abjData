@@ -22,7 +22,7 @@ Description: The Brazilian Jurimetrics Association (ABJ in
     English, see <https://abj.org.br/> for more information) is
     a non-profit organization which aims to investigate and promote the
     use of statistics and probability in the study of Law and its
-    institutions. This package is a set of cases commonly used by
+    institutions. This package has a set of datasets commonly used by
      ABJ, assisting in research analysis.
 Depends:
     R (>= 3.3.1)
@@ -30,14 +30,6 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
-Imports: ggplot2,
-    httr,
-    readxl,
+Imports: 
     tibble,
-    janitor,
-    dplyr,
-    tidyr,
-    jsonlite,
-    purrr,
-    stringr,
-    abjutils
+    magrittr
