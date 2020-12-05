@@ -14,7 +14,7 @@ name: R-CMD-check
 
 jobs:
   R-CMD-check:
-    runs-on: macOS-latest
+    runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -22,6 +22,7 @@ jobs:
       - uses: r-lib/actions/setup-r@v1
       - name: Install dependencies
         run: |
+          options(repos = "https://packagemanager.rstudio.com/all/__linux__/bionic/latest")
           install.packages(c("remotes", "rcmdcheck"))
           remotes::install_deps(dependencies = TRUE)
         shell: Rscript {0}
