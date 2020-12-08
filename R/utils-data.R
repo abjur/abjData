@@ -92,3 +92,32 @@
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 'pnud_min'
+
+#' assuntos
+#'
+#' Um conjunto de dados que contém informações sobre cifras ocultas.
+#'
+#' @format um data frame com 37022 linhas e 15 variaveis.
+#'
+#' \describe{
+#'   \item{local}{indica qual é o local/tribunal respectivo}
+#'   \item{assunto_generico}{assunto genérico}
+#'   \item{assunto_1}{1ª ramificação}
+#'   \item{assunto_2}{2ª ramificação}
+#'   \item{assunto_3}{nome da UF original.}
+#'   \item{uf_sigla}{sigla da UF.}
+#'   \item{uf_id}{codigo IBGE da UF.}
+#'   \item{regiao_nm}{nome da regiao.}
+#'   \item{tse_id}{codigo TSE do municipio.}
+#'   \item{rf_id}{codigo Receita Federal do municipio.}
+#'   \item{bcb_id}{codigo do Banco Central do Brasil do municipio.}
+#'   \item{existia_1991}{1 se municipio existia em 1991, 0 caso contrario.}
+#'   \item{existia_2000}{1 se municipio existia em 2000, 0 caso contrario.}
+#'   \item{existia_2010}{1 se municipio existia em 2010, 0 caso contrario.}
+#'   \item{lon}{longitude baseada no centroide do shapefile.}
+#'   \item{lat}{latitude baseada no centroide do shapefile.}
+#' }
+#'
+#' @source \url{https://paineis.cnj.jus.br/QvAJAXZfc/opendoc.htm?document=qvw_l%2FPainelCNJ.qvw&host=QVS%40neodimio03&anonymous=true&sheet=shResumoDespFT}
+'assuntos'
+
