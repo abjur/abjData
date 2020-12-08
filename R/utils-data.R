@@ -92,3 +92,33 @@
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 'pnud_min'
+
+#' assuntos
+#'
+#' Um conjunto de dados que contém informações sobre cifras ocultas.
+#'
+#' @format um data frame com 37022 linhas e 16 variaveis.
+#'
+#' \describe{
+#'   \item{tribunal}{indica qual é o tribunal respectivo}
+#'   \item{ano}{ano do assunto}
+#'   \item{assunto_generico}{assunto genérico}
+#'   \item{assunto_nome1}{1ª ramificação}
+#'   \item{assunto_nome2}{2ª ramificação}
+#'   \item{assunto_nome3}{3ª ramificação}
+#'   \item{assunto_nome4}{4ª ramificação}
+#'   \item{assunto_nome5}{5ª ramificação}
+#'   \item{assunto_nome6}{6ª ramificação}
+#'   \item{assunto_nome7}{7ª ramificação}
+#'   \item{codigos}{codigo relacionados ao assunto}
+#'   \item{assun_cod_inst}{codigos da instancia}
+#'   \item{x1_grau}{numeros de casos em 1° grau}
+#'   \item{x2_grau}{numeros de casos em 2° grau}
+#'   \item{juizado_especial}{numeros de casos no juizado especial}
+#'   \item{turma_especial}{numeros de casos na turma especial}
+#'   \item{total}{total de casos}
+#' }
+#'
+#' @source \url{https://www.cnj.jus.br/}
+'assuntos'
+
