@@ -10,7 +10,7 @@ um data frame com 16686 linhas e 14 variaveis.
 \describe{mais informações consulte a pnud_siglas}
 }
 \source{
-@source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
+\url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 }
 \usage{
 pnud_min

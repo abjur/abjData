@@ -1,9 +1,5 @@
-library(readxl)
-library(writexl)
 library(magrittr)
-library(dplyr)
 library(tidyverse)
-
 
 # Importando
 
@@ -12,30 +8,27 @@ aquivos_assuntos_lista <- fs::dir_ls(path = caminho_pasta, glob = "*.xlsx")
 
 aquivos_assuntos_lista # Visualização
 
-lista_das_planilhas <- purrr::map(aquivos_assuntos_lista, read_excel, col_types = "text")
+lista_das_planilhas <- purrr::map(aquivos_assuntos_lista, readxl::read_excel, col_types = "text")
 
 # importando todos os arquivos .xlsx
 
 lista_das_planilhas # visualização
 
-assuntos <- bind_rows(lista_das_planilhas, .id = "file") %>%
-  rename_all(~c("local",
-                "assunto_generico",
-                 "assunto_1",
-                 "assunto_2",
-                 "assunto_3",
-                 "assunto_4",
-                 "assunto_5",
-                 "assunto_6",
-                 "codigos",
-                 "assunto_cod_inst",
-                 "1_grau",
-                 "2_grau",
-                 "juizado_especial",
-                 "turma_recursal",
-                 "total")) # adicionando coluna com os nomes
+# adicionando coluna com os nomes e arrumando nomes de colunas
+assuntos_sujos <- bind_rows(lista_das_planilhas, .id = "file") %>%
+  dplyr::rename_all(gsub, pattern = "º", replacement = "") %>%
+  janitor::clean_names()
 
+# criando colunas para tribunal e ano
+assuntos <- assuntos %>%
+  mutate(file = basename(file)) %>%
+  separate(file, c("tipo", "tribunal", "ano")) %>%
+  select(-c(tipo, assunto_casos_novos_instancia))
 
-write_xlsx(df_assuntos, "~/Documents/abjData/assuntos.xlsx")
+# para exportar
+writexl::write_xlsx(assuntos, "~/Documents/abjData/assuntos.xlsx")
 
+# acrescentanto base ao pacote
 usethis::use_data(assuntos, overwrite = TRUE)
+
+
