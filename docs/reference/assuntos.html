@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>muni — muni • abjData</title>
+<title>assuntos — assuntos • abjData</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,10 +46,8 @@
 
 
 
-<meta property="og:title" content="muni — muni" />
-<meta property="og:description" content="Um conjunto de dados que contem dados uteis para fazer join
-com bases de municipios, como codigos dos municipios, codigo tse,
-sigla/nome/codigo das UFs e regiao." />
+<meta property="og:title" content="assuntos — assuntos" />
+<meta property="og:description" content="Um conjunto de dados que contém informações sobre cifras ocultas." />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -123,46 +121,45 @@ sigla/nome/codigo das UFs e regiao." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>muni</h1>
+    <h1>assuntos</h1>
     
-    <div class="hidden name"><code>muni.Rd</code></div>
+    <div class="hidden name"><code>assuntos.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Um conjunto de dados que contem dados uteis para fazer join
-com bases de municipios, como codigos dos municipios, codigo tse,
-sigla/nome/codigo das UFs e regiao.</p>
+    <p>Um conjunto de dados que contém informações sobre cifras ocultas.</p>
     </div>
 
-    <pre class="usage"><span class='va'>muni</span></pre>
+    <pre class="usage"><span class='va'>assuntos</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>um data frame com 5572 linhas e 16 colunas:</p>
+    <p>um data frame com 37022 linhas e 16 variaveis.</p>
 <dl>
-  <dt>muni_id</dt><dd><p>codigo IBGE (7 digitos).</p></dd>
-  <dt>muni_id_6</dt><dd><p>codigo IBGE (6 digitos).</p></dd>
-  <dt>muni_nm</dt><dd><p>nome do municipio (original IBGE).</p></dd>
-  <dt>muni_nm_clean</dt><dd><p>nome do municipio limpo (sem acentos, caixa alta).</p></dd>
-  <dt>uf_nm</dt><dd><p>nome da UF original.</p></dd>
-  <dt>uf_sigla</dt><dd><p>sigla da UF.</p></dd>
-  <dt>uf_id</dt><dd><p>codigo IBGE da UF.</p></dd>
-  <dt>regiao_nm</dt><dd><p>nome da regiao.</p></dd>
-  <dt>tse_id</dt><dd><p>codigo TSE do municipio.</p></dd>
-  <dt>rf_id</dt><dd><p>codigo Receita Federal do municipio.</p></dd>
-  <dt>bcb_id</dt><dd><p>codigo do Banco Central do Brasil do municipio.</p></dd>
-  <dt>existia_1991</dt><dd><p>1 se municipio existia em 1991, 0 caso contrario.</p></dd>
-  <dt>existia_2000</dt><dd><p>1 se municipio existia em 2000, 0 caso contrario.</p></dd>
-  <dt>existia_2010</dt><dd><p>1 se municipio existia em 2010, 0 caso contrario.</p></dd>
-  <dt>lon</dt><dd><p>longitude baseada no centroide do shapefile.</p></dd>
-  <dt>lat</dt><dd><p>latitude baseada no centroide do shapefile.</p></dd>
+  <dt>tribunal</dt><dd><p>indica qual é o tribunal respectivo</p></dd>
+  <dt>ano</dt><dd><p>ano do assunto</p></dd>
+  <dt>assunto_generico</dt><dd><p>assunto genérico</p></dd>
+  <dt>assunto_nome1</dt><dd><p>1ª ramificação</p></dd>
+  <dt>assunto_nome2</dt><dd><p>2ª ramificação</p></dd>
+  <dt>assunto_nome3</dt><dd><p>3ª ramificação</p></dd>
+  <dt>assunto_nome4</dt><dd><p>4ª ramificação</p></dd>
+  <dt>assunto_nome5</dt><dd><p>5ª ramificação</p></dd>
+  <dt>assunto_nome6</dt><dd><p>6ª ramificação</p></dd>
+  <dt>assunto_nome7</dt><dd><p>7ª ramificação</p></dd>
+  <dt>codigos</dt><dd><p>codigo relacionados ao assunto</p></dd>
+  <dt>assun_cod_inst</dt><dd><p>codigos da instancia</p></dd>
+  <dt>x1_grau</dt><dd><p>numeros de casos em 1° grau</p></dd>
+  <dt>x2_grau</dt><dd><p>numeros de casos em 2° grau</p></dd>
+  <dt>juizado_especial</dt><dd><p>numeros de casos no juizado especial</p></dd>
+  <dt>turma_especial</dt><dd><p>numeros de casos na turma especial</p></dd>
+  <dt>total</dt><dd><p>total de casos</p></dd>
 
 </dl>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>base do pacote geobr enriquecida com dados do TSE e centroides</p>
+    <p><a href='https://www.cnj.jus.br/'>https://www.cnj.jus.br/</a></p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

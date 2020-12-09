@@ -49,7 +49,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">abjData</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -98,15 +98,15 @@
 <span class="co"># Para instalar pacote remotes</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"remotes"</span><span class="op">)</span>
 <span class="co"># Para instalar a versão GitHub (dev)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"abjur/abjutils"</span><span class="op">)</span></pre></div>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"abjur/abjData"</span><span class="op">)</span></pre></div>
 </div>
 <div id="bases-disponíveis" class="section level2">
 <h2 class="hasAnchor">
 <a href="#bases-dispon%C3%ADveis" class="anchor"></a>Bases disponíveis</h2>
 <table class="table">
 <colgroup>
-<col width="15%">
-<col width="84%">
+<col width="14%">
+<col width="85%">
 </colgroup>
 <thead><tr class="header">
 <th>Base</th>
@@ -114,26 +114,30 @@
 </tr></thead>
 <tbody>
 <tr class="odd">
+<td><code>assuntos</code></td>
+<td>Dados que contém informações sobre cifras ocultas.</td>
+</tr>
+<tr class="even">
 <td><code>cadmun</code></td>
 <td>(LEGADO) Um conjunto de dados que contém os códigos de cadastro municipal.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>muni</code></td>
 <td>Dados úteis de municípios para fazer join com outras bases.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>pnud_muni</code></td>
 <td>Um conjunto de dados que contém informações sobre PNUD de municípios por anos.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>pnud_min</code></td>
 <td>Base minimal do PNUD municípios para fazer análises rápidas</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>pnud_siglas</code></td>
 <td>Um conjuto de dados que serve como glossário das siglas disponíveis.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>pnud_uf</code></td>
 <td>Um conjunto de dados que contém informações sobre PNUD de Unidades Federativas.</td>
 </tr>
@@ -161,6 +165,7 @@
 <a href="#exemplos-de-gr%C3%A1fico" class="anchor"></a>Exemplos de gráfico</h3>
 <p>IDH-Municipal:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
+
 <span class="va">pnud_min</span> <span class="op">%&gt;%</span>
   <span class="fu">pivot_longer</span><span class="op">(</span><span class="fu">starts_with</span><span class="op">(</span><span class="st">"idhm"</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span> 
   <span class="fu">mutate</span><span class="op">(</span>tipo <span class="op">=</span> <span class="fu">case_when</span><span class="op">(</span>
