@@ -37,7 +37,7 @@ remotes::install_github("abjur/abjData")
 ## Bases disponíveis
 
 | Base          | Descrição                                                                       |
-| ------------- | ------------------------------------------------------------------------------- |
+|---------------|---------------------------------------------------------------------------------|
 | `assuntos`    | Dados que contém informações sobre cifras ocultas.                              |
 | `cadmun`      | (LEGADO) Um conjunto de dados que contém os códigos de cadastro municipal.      |
 | `muni`        | Dados úteis de municípios para fazer join com outras bases.                     |
@@ -73,7 +73,6 @@ glimpse(pnud_siglas)
 IDH-Municipal:
 
 ``` r
-
 pnud_min %>%
   pivot_longer(starts_with("idhm")) %>% 
   mutate(tipo = case_when(
