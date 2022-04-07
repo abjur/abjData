@@ -24,6 +24,7 @@ um data frame com 5572 linhas e 16 colunas:
   \item{existia_2010}{1 se municipio existia em 2010, 0 caso contrario.}
   \item{lon}{longitude baseada no centroide do shapefile.}
   \item{lat}{latitude baseada no centroide do shapefile.}
+  \item{capital}{TRUE se capital da UF, FALSE caso contrario.}
 }
 }
 \source{

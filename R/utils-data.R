@@ -123,3 +123,39 @@
 #' @source \url{https://www.cnj.jus.br/}
 'assuntos'
 
+#' Jurisprudencia consumidor
+#'
+#' Base retrospectiva para utilizar em exemplos do livro.
+#'
+#' @format um data frame com 37022 linhas e 16 variaveis.
+#'
+#' \describe{
+#'   \item{id_processo}{numero identificador do processo (apelacao)}
+#'   \item{assunto}{assunto do processo}
+#'   \item{valor}{valor da causa}
+#'   \item{tipo_litigio}{configuracao das partes no litigio}
+#'   \item{dec_val}{decisao de segundo grau}
+#'   \item{dec_unanime}{unanimidade}
+#'   \item{dec_date}{data da decisao}
+#'   \item{tempo}{tempo do recurso, em dias}
+#' }
+'consumo'
+
+#' Leiloes
+#'
+#' Base sobre leiloes
+#'
+#' @format um data frame com 37022 linhas e 16 variaveis.
+#'
+#' \describe{
+#'   \item{id_processo}{numero identificador do processo (apelacao)}
+#'   \item{descricao}{descricao do item}
+#'   \item{id_leiloeiro}{ID do leiloeiro}
+#'   \item{tipo_remuneracao}{Tipo de remuneração do leiloeiro}
+#'   \item{modalidade}{modalidade do leilão}
+#'   \item{tipo}{tipo de leilão}
+#'   \item{vendeu}{o item foi vendido?}
+#'   \item{valor_avaliacao_inicial}{valor avaliado}
+#'   \item{valor_total_arrematado}{valor arrematado}
+#' }
+'leiloes'
