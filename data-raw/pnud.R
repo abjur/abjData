@@ -20,3 +20,16 @@ pnud_min <- pnud_min %>%
 # usethis::use_data(pnud_uf, overwrite = TRUE)
 # usethis::use_data(pnud_muni, overwrite = TRUE)
 usethis::use_data(pnud_min, overwrite = TRUE)
+
+# Arrumar issue da bea --------------------------------------------------------------------------------------------------------------------------
+
+pnud_siglas <- abjData::pnud_siglas %>%
+  dplyr::mutate(
+    sigla = dplyr::case_when(
+      sigla == "idhm_ e" ~ "idhm_e",
+      TRUE ~ sigla
+    )
+  ) %>%
+  dplyr::filter(sigla %in% names(abjData::pnud_min))
+
+usethis::use_data(pnud_siglas, overwrite = TRUE)

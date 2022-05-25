@@ -1,7 +1,11 @@
-## Test environments
-* local R installation, R 4.1.1
-* ubuntu 16.04 (on travis-ci), R 4.1.1
-* win-builder (devel)
+## Submission
+This is a submission.
+
+## R CMD Check Results
+When running R CMD Check locally there were no ERRORs.
+
+When running R CMD Check has WARNING that LazyDatas and NOTE that it is characteristic of the package itself.
+
 
 ## R CMD check results
 
