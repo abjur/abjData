@@ -12,6 +12,8 @@ Considerada a unidade observacional ano-municipio.
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
+
+summary(pnud_muni)
 }
 \usage{
 pnud_muni

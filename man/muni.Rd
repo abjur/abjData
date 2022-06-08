@@ -38,4 +38,8 @@ Um conjunto de dados que contem dados uteis para fazer join
 com bases de municipios, como codigos dos municipios, codigo tse,
 sigla/nome/codigo das UFs e regiao.
 }
+\examples{
+
+summary(muni)
+}
 \keyword{datasets}

@@ -20,4 +20,8 @@ cadmun
 Um conjunto de dados que contem os codigos de cadastro municipal.
 A base esta desatualizada, pois nao considera todos os municipios.
 }
+\examples{
+
+summary(cadmun)
+}
 \keyword{datasets}

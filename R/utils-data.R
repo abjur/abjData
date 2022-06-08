@@ -9,6 +9,10 @@
 #' informacoes sobre fronteira, amazonia, capital, longitude, latitude, entre outros}
 #'
 #' @source cadmun
+#'
+#' @examples
+#'
+#' summary(cadmun)
 'cadmun'
 
 #' muni
@@ -40,6 +44,10 @@
 #' }
 #'
 #' @source base do pacote geobr enriquecida com dados do TSE e centroides
+#'
+#' @examples
+#'
+#' summary(muni)
 'muni'
 
 
@@ -53,6 +61,8 @@
 #' \describe{mais informacoes consulte a pnud_siglas}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
+#'
+#' summary(pnud_muni)
 'pnud_muni'
 
 #' pnud_siglas
@@ -68,6 +78,10 @@
 #' }
 #'
 #' @source pnud_siglas
+#'
+#' @examples
+#'
+#' summary(pnud_siglas)
 'pnud_siglas'
 
 #' pnud_uf
@@ -80,6 +94,10 @@
 #' \describe{mais informações consulte a pnud_siglas}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}
+#'
+#' @examples
+#'
+#' summary(pnud_uf)
 'pnud_uf'
 
 
@@ -92,6 +110,10 @@
 #' \describe{mais informações consulte a pnud_siglas}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
+#'
+#' @examples
+#'
+#' summary(pnud_siglas)
 'pnud_min'
 
 #' assuntos
@@ -121,6 +143,10 @@
 #' }
 #'
 #' @source \url{https://www.cnj.jus.br/}
+#'
+#' @examples
+#'
+#' summary(assuntos)
 'assuntos'
 
 #' Jurisprudencia consumidor
@@ -139,6 +165,12 @@
 #'   \item{dec_date}{data da decisao}
 #'   \item{tempo}{tempo do recurso, em dias}
 #' }
+#'
+#' @source \url{https://abj.org.br/}
+#'
+#' @examples
+#'
+#' summary(consumo)
 'consumo'
 
 #' Leiloes
@@ -158,4 +190,10 @@
 #'   \item{valor_avaliacao_inicial}{valor avaliado}
 #'   \item{valor_total_arrematado}{valor arrematado}
 #' }
+#'
+#' @source \url{https://obs.abj.org.br/}
+#'
+#' @examples
+#'
+#' summary(leiloes)
 'leiloes'

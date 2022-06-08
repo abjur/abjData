@@ -19,10 +19,17 @@ um data frame com 37022 linhas e 16 variaveis.
   \item{valor_total_arrematado}{valor arrematado}
 }
 }
+\source{
+\url{https://obs.abj.org.br/}
+}
 \usage{
 leiloes
 }
 \description{
 Base sobre leiloes
+}
+\examples{
+
+summary(leiloes)
 }
 \keyword{datasets}

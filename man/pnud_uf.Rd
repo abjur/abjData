@@ -19,4 +19,8 @@ pnud_uf
 Um conjunto de dados que contem informacoes sobre PNUD de Unidades Federativas.
 Considerada a unidade observacional ano-uf.
 }
+\examples{
+
+summary(pnud_uf)
+}
 \keyword{datasets}

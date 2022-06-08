@@ -18,10 +18,17 @@ um data frame com 37022 linhas e 16 variaveis.
   \item{tempo}{tempo do recurso, em dias}
 }
 }
+\source{
+\url{https://abj.org.br/}
+}
 \usage{
 consumo
 }
 \description{
 Base retrospectiva para utilizar em exemplos do livro.
+}
+\examples{
+
+summary(consumo)
 }
 \keyword{datasets}

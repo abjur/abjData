@@ -18,4 +18,8 @@ pnud_min
 \description{
 Um conjunto de dados que contém informações sobre PNUD de municípios por anos.
 }
+\examples{
+
+summary(pnud_siglas)
+}
 \keyword{datasets}

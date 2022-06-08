@@ -22,4 +22,8 @@ pnud_siglas
 \description{
 Um conjuto de dados que serve como glossario das siglas disponiveis.
 }
+\examples{
+
+summary(pnud_siglas)
+}
 \keyword{datasets}

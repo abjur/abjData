@@ -36,4 +36,8 @@ assuntos
 \description{
 Um conjunto de dados que contém informações sobre cifras ocultas.
 }
+\examples{
+
+summary(assuntos)
+}
 \keyword{datasets}
