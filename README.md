@@ -7,6 +7,8 @@
 
 [![R build
 status](https://github.com/abjur/abjData/workflows/R-CMD-check/badge.svg)](https://github.com/abjur/abjData/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/abjData)](https://CRAN.R-project.org/package=abjData)
 <!-- badges: end -->
 
 ## Visão geral
@@ -56,19 +58,16 @@ O pacote `{abjData}` pode ser carregado como qualquer outro pacote de R:
 ``` r
 library(abjData) # Carrega o pacote
 library(tidyverse)
-#> Warning: package 'tidyr' was built under R version 4.1.2
-#> Warning: package 'readr' was built under R version 4.1.2
-#> Warning: package 'dplyr' was built under R version 4.1.2
 ```
 
 ``` r
 glimpse(pnud_siglas)
-#> Rows: 237
+#> Rows: 8
 #> Columns: 4
-#> $ sigla      <chr> "uf", "ufn", "codmun6", "codmun7", "nomemun", "espvida", "f…
-#> $ nome_curto <chr> "Código da Unidade da Federação", "Nome da Unidade da Feder…
-#> $ nome_longo <chr> "Código da Unidade da Federação", "Nome da Unidade da Feder…
-#> $ definicao  <chr> "Código utilizado pelo IBGE para identificação do estado.",…
+#> $ sigla      <chr> "espvida", "gini", "rdpc", "pop", "idhm", "idhm_e", "idhm_l…
+#> $ nome_curto <chr> "Esperança de vida ao nascer", "Índice de Gini", "Renda per…
+#> $ nome_longo <chr> "Esperança de vida ao nascer", "Índice de Gini", "Renda per…
+#> $ definicao  <chr> "Número médio de anos que as pessoas deverão viver a partir…
 ```
 
 ### Exemplos de gráfico
