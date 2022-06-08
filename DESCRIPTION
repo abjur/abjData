@@ -1,5 +1,5 @@
 Package: abjData
-Title: Databases used routinely by the Brazilian Jurimetrics Association
+Title: Databases Used Routinely by the Brazilian Jurimetrics Association
 Version: 0.1.0
 Authors@R: 
     c(person(given = "Julio",
@@ -19,11 +19,11 @@ Authors@R:
       person(given = "Associação Brasileira de Jurimetria",    
              role = c("cph", "fnd")))
 Description: The Brazilian Jurimetrics Association (ABJ in
-    English, see <https://abj.org.br/> for more information) is
+    Portuguese, see <https://abj.org.br/> for more information) is
     a non-profit organization which aims to investigate and promote the
     use of statistics and probability in the study of Law and its
-    institutions. This package has a set of datasets commonly used by
-     ABJ, assisting in research analysis.
+    institutions. This package has a set of datasets commonly used in
+    our book.
 Depends:
     R (>= 3.3.1)
 License: MIT + file LICENSE
@@ -32,3 +32,4 @@ LazyData: true
 RoxygenNote: 7.2.0
 Imports: 
     magrittr
+LazyDataCompression: xz
