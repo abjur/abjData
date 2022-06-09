@@ -1,14 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# abjData <a href='http://abjur.github.io/abjData/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
+# abjData <a href='https://abjur.github.io/abjData/'><img src='man/figures/logo.png' align="right" height="138.5" /></a>
 
 <!-- badges: start -->
 
 [![R build
 status](https://github.com/abjur/abjData/workflows/R-CMD-check/badge.svg)](https://github.com/abjur/abjData/actions)
 [![CRAN
-status](https://www.r-pkg.org/badges/version/abjData)](https://CRAN.R-project.org/package=abjData)
+status](https://www.r-pkg.org/badges/version/abjData/)](https://CRAN.R-project.org/package=abjData)
 <!-- badges: end -->
 
 ## Visão geral
@@ -18,7 +18,7 @@ pela Associação Brasileira de Jurimetria.
 
 Os dados incluídos são provenientes do Índice de Desenvolvimento Humano
 dos municípios, coletados a partir do [Atlas do Desenvolvimento
-Humano](http://www.atlasbrasil.org.br/) e [bases de dados
+Humano](https://www.atlasbrasil.org.br/) e [bases de dados
 cartograficas](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
 
 O objetivo do pacote é disponibilizar bases de dados para utilização
