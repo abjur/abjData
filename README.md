@@ -18,7 +18,7 @@ pela Associação Brasileira de Jurimetria.
 
 Os dados incluídos são provenientes do Índice de Desenvolvimento Humano
 dos municípios, coletados a partir do [Atlas do Desenvolvimento
-Humano](https://www.atlasbrasil.org.br/) e [bases de dados
+Humano](http://www.atlasbrasil.org.br/) e [bases de dados
 cartograficas](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
 
 O objetivo do pacote é disponibilizar bases de dados para utilização
