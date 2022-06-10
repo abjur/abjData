@@ -3,19 +3,19 @@
 \docType{data}
 \name{consumo}
 \alias{consumo}
-\title{Jurisprudencia consumidor}
+\title{consumo}
 \format{
-um data frame com 37022 linhas e 16 variaveis.
+a data frame with 37022 lines e 16 variables.
 
 \describe{
-  \item{id_processo}{numero identificador do processo (apelacao)}
-  \item{assunto}{assunto do processo}
-  \item{valor}{valor da causa}
-  \item{tipo_litigio}{configuracao das partes no litigio}
-  \item{dec_val}{decisao de segundo grau}
-  \item{dec_unanime}{unanimidade}
-  \item{dec_date}{data da decisao}
-  \item{tempo}{tempo do recurso, em dias}
+  \item{id_processo}{process identifier number (appeal).}
+  \item{assunto}{subject of the process.}
+  \item{valor}{value of cause.}
+  \item{tipo_litigio}{configuration of the parties to the dispute.}
+  \item{dec_val}{second degree decision.}
+  \item{dec_unanime}{unanimity.}
+  \item{dec_date}{decision date.}
+  \item{tempo}{resource time, in days.}
 }
 }
 \source{
@@ -25,7 +25,7 @@ um data frame com 37022 linhas e 16 variaveis.
 consumo
 }
 \description{
-Base retrospectiva para utilizar em exemplos do livro.
+Retrospective basis to use in book examples.
 }
 \examples{
 

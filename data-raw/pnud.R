@@ -1,6 +1,6 @@
 ## code to prepare `pnud` dataset goes here
 
-## TODO criar codigo reprodutivel
+## TODO create reproducible code
 
 
 aux_join <- pnud_muni %>%
@@ -9,7 +9,7 @@ aux_join <- pnud_muni %>%
   left_join(distinct(muni, uf_id, uf_sigla), c("uf" = "uf_id")) %>%
   select(-uf)
 
-# adicionando codigo municipio na pnud_min
+# adding municipality code in pnud_min
 pnud_min <- pnud_min %>%
   mutate(ano = as.character(ano)) %>%
   inner_join(aux_join, c("uf" = "uf_sigla", "muni" = "municipio", "ano")) %>%
@@ -21,7 +21,7 @@ pnud_min <- pnud_min %>%
 # usethis::use_data(pnud_muni, overwrite = TRUE)
 usethis::use_data(pnud_min, overwrite = TRUE)
 
-# Arrumar issue da bea --------------------------------------------------------------------------------------------------------------------------
+# fix issue's bea --------------------------------------------------------------------------------------------------------------------------
 
 pnud_siglas <- abjData::pnud_siglas %>%
   dplyr::mutate(

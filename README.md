@@ -11,49 +11,49 @@ status](https://github.com/abjur/abjData/workflows/R-CMD-check/badge.svg)](https
 status](https://www.r-pkg.org/badges/version/abjData/)](https://CRAN.R-project.org/package=abjData)
 <!-- badges: end -->
 
-## Visão geral
+## Overview
 
-Esse pacote contém conjunto de bases de dados utilizadas frequentemente
-pela Associação Brasileira de Jurimetria.
+This package contains a set of databases frequently used by the
+Brazilian Association of Jurimetry.
 
-Os dados incluídos são provenientes do Índice de Desenvolvimento Humano
-dos municípios, coletados a partir do [Atlas do Desenvolvimento
-Humano](http://www.atlasbrasil.org.br/) e [bases de dados
-cartograficas](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
+The data included comes from the Human Development Index of the
+municipalities, collected from the [Atlas do Desenvolvimento
+Humano](https://www.atlasbrasil.org.br/) and [cartographic
+databases](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
 
-O objetivo do pacote é disponibilizar bases de dados para utilização
-rápida em outros projetos.
+The purpose of the package is to make databases available for quick use
+in other projects.
 
-## Para instalar
+## For installing
 
-Para instalar a partir do endereço de um dos repositórios você precisa
-ter o pacote `{remotes}` instalado.
+To install from one of the repositories, you need to have the
+`{remotes}` package installed.
 
 ``` r
-# Para instalar pacote remotes
+# For installing remotes package
 install.packages("remotes")
-# Para instalar a versão GitHub (dev)
+# For installing the GitHub (dev) version
 remotes::install_github("abjur/abjData")
 ```
 
-## Bases disponíveis
+## Available bases
 
-| Base          | Descrição                                                                       |
-|---------------|---------------------------------------------------------------------------------|
-| `assuntos`    | Dados que contém informações sobre cifras ocultas.                              |
-| `cadmun`      | (LEGADO) Um conjunto de dados que contém os códigos de cadastro municipal.      |
-| `muni`        | Dados úteis de municípios para fazer join com outras bases.                     |
-| `pnud_muni`   | Um conjunto de dados que contém informações sobre PNUD de municípios por anos.  |
-| `pnud_min`    | Base minimal do PNUD municípios para fazer análises rápidas                     |
-| `pnud_siglas` | Um conjuto de dados que serve como glossário das siglas disponíveis.            |
-| `pnud_uf`     | Um conjunto de dados que contém informações sobre PNUD de Unidades Federativas. |
+| Base          | Description                                                         |
+|---------------|---------------------------------------------------------------------|
+| `assuntos`    | Data that contains information about hidden ciphers.                |
+| `cadmun`      | (LEGACY) A dataset that contains the municipal cadastre codes.      |
+| `muni`        | Useful data from municipalities to join with other databases.       |
+| `pnud_muni`   | A dataset containing UNDP information from municipalities by years. |
+| `pnud_min`    | Minimal base of PNUD municipalities to make quick analyzes          |
+| `pnud_siglas` | A dataset that serves as a glossary of available acronyms.          |
+| `pnud_uf`     | A dataset that contains information about PNUD of Federative Units. |
 
-## Uso
+## How to use
 
-Depois de instalado, basta carregar o pacote e chamar o conjunto de
-dados que deseja usar.
+Once installed, just load the package and call the dataset you want to
+use.
 
-O pacote `{abjData}` pode ser carregado como qualquer outro pacote de R:
+The `{abjData}` package can be loaded like any other R package:
 
 ``` r
 library(abjData) # Carrega o pacote
@@ -70,7 +70,7 @@ glimpse(pnud_siglas)
 #> $ definicao  <chr> "Número médio de anos que as pessoas deverão viver a partir…
 ```
 
-### Exemplos de gráfico
+### Chart examples
 
 IDH-Municipal:
 
@@ -104,7 +104,7 @@ pnud_min %>%
 
 ![](man/figures/README-fig-idhm-1.png)<!-- -->
 
-Posição dos municípios:
+Position of municipalities:
 
 ``` r
 muni %>% 
@@ -116,11 +116,11 @@ muni %>%
 
 ![](man/figures/README-unnamed-chunk-5-1.png)<!-- -->
 
-## Requisitos
+## Requirements
 
-`{abjData}` requer uma versão do R superior ou igual a 3.4
+`{abjData}` requires an R version greater than or equal to 3.4.
 
-## Licença
+## Licence
 
-O `{abjData}` é licenciado sob os termos
+`{abjData}` is licensed under the terms
 [MIT](https://github.com/abjur/abjData/blob/master/LICENSE).

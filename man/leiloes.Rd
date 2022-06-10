@@ -5,18 +5,18 @@
 \alias{leiloes}
 \title{Leiloes}
 \format{
-um data frame com 37022 linhas e 16 variaveis.
+a data frame with 37022 lines e 16 variables.
 
 \describe{
-  \item{id_processo}{numero identificador do processo (apelacao)}
-  \item{descricao}{descricao do item}
-  \item{id_leiloeiro}{ID do leiloeiro}
-  \item{tipo_remuneracao}{Tipo de remuneração do leiloeiro}
-  \item{modalidade}{modalidade do leilão}
-  \item{tipo}{tipo de leilão}
-  \item{vendeu}{o item foi vendido?}
-  \item{valor_avaliacao_inicial}{valor avaliado}
-  \item{valor_total_arrematado}{valor arrematado}
+  \item{id_processo}{process identifier number (appeal).}
+  \item{descricao}{item description.}
+  \item{id_leiloeiro}{Auctioneer ID.}
+  \item{tipo_remuneracao}{Auctioneer compensation type.}
+  \item{modalidade}{auction mode.}
+  \item{tipo}{auction type.}
+  \item{vendeu}{was the item sold?}
+  \item{valor_avaliacao_inicial}{appraised value.}
+  \item{valor_total_arrematado}{auctioned value.}
 }
 }
 \source{
@@ -26,7 +26,7 @@ um data frame com 37022 linhas e 16 variaveis.
 leiloes
 }
 \description{
-Base sobre leiloes
+Base on auctions
 }
 \examples{
 

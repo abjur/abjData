@@ -1,24 +1,24 @@
 library(tidyverse)
 
-# Importando
+# Importing
 
 caminho_pasta <- "~/Downloads/Assuntos_Tribunais/"
 aquivos_assuntos_lista <- fs::dir_ls(path = caminho_pasta, glob = "*.xlsx")
 
-aquivos_assuntos_lista # Visualização
+aquivos_assuntos_lista # View
 
 lista_das_planilhas <- purrr::map(aquivos_assuntos_lista, readxl::read_excel, col_types = "text")
 
-# importando todos os arquivos .xlsx
+# Importing all files .xlsx
 
-lista_das_planilhas # visualização
+lista_das_planilhas # view
 
 lista_das_planilhas[[1]] %>% View
 
-# adicionando coluna com os nomes e arrumando nomes de colunas
+# adding column with names and arranging column names
 assuntos_sujos <- bind_rows(lista_das_planilhas, .id = "file")
 
-# criando colunas para tribunal e ano
+# creating columns for court and year
 assuntos_limpos <- assuntos_sujos  %>%
   dplyr::rename_with(janitor::make_clean_names, replace = c("º" = "")) %>%
   mutate(file = basename(file)) %>%
@@ -30,7 +30,7 @@ assuntos_limpos <- assuntos_sujos  %>%
     across(c(assunto_nome1:assunto_nome6), replace_na, "-")
   )
 
-# adicionando a coluna generico e especifico
+# adding the generic and specific column
 
 cria_generico_i <- function(assuntos_limpos, i) {
   nome_coluna <- paste0("generico", i)
@@ -50,10 +50,10 @@ assuntos <- purrr::reduce(1:5, cria_generico_i, .init = assuntos_limpos) %>%
   )) %>%
   relocate(generico, .after = assunto_nome6)
 
-# para exportar
+# to export
 writexl::write_xlsx(assuntos, "~/Documents/abjData/assuntos.xlsx")
 
-# acrescentanto base ao pacote
+# adding base to package
 usethis::use_data(assuntos, overwrite = TRUE)
 
 

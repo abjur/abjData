@@ -5,10 +5,11 @@
 \alias{pnud_muni}
 \title{pnud_muni}
 \format{
-um data frame com 16695 linhas e 238 variaveis.
-Considerada a unidade observacional ano-municipio.
+a data frame with 16695 lines e 238 variables.
 
-\describe{mais informacoes consulte a pnud_siglas}
+Considered the year-municipal observational unit.
+
+\describe{more information see the pnud_siglas.}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
@@ -19,6 +20,6 @@ summary(pnud_muni)
 pnud_muni
 }
 \description{
-Um conjunto de dados que contém informações sobre PNUD de municipios e UFs.
+A dataset that contains information about UNDP for municipalities and UFs.
 }
 \keyword{datasets}

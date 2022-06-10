@@ -1,12 +1,12 @@
 #' cadmun
 #'
-#' Um conjunto de dados que contem os codigos de cadastro municipal.
-#' A base esta desatualizada, pois nao considera todos os municipios.
+#' A dataset that contains the municipal cadastre codes.
+#' The database is outdated, as it does not consider all municipalities.
 #'
-#' @format um data frame com 5657 e 35 variaveis:
+#' @format a data frame with 5657 lines e 35 variables:
 #'
-#' \describe{conjunto de codigos dos municipios e sua situacao, contendo
-#' informacoes sobre fronteira, amazonia, capital, longitude, latitude, entre outros}
+#' \describe{set of codes of the municipalities and their situation, containing
+#' information about border, amazonia, capital, longitude, latitude, among others}
 #'
 #' @source cadmun
 #'
@@ -17,33 +17,33 @@
 
 #' muni
 #'
-#' Um conjunto de dados que contem dados uteis para fazer join
-#' com bases de municipios, como codigos dos municipios, codigo tse,
-#' sigla/nome/codigo das UFs e regiao.
+#' A dataset that contains data useful for joining
+#' with city bases, such as city codes, tse code,
+#' acronym/name/code of the UFs and region.
 #'
-#' @format um data frame com 5572 linhas e 16 colunas:
+#' @format a data frame with 5572 lines e 16 varibles:
 #'
 #' \describe{
-#'   \item{muni_id}{codigo IBGE (7 digitos).}
-#'   \item{muni_id_6}{codigo IBGE (6 digitos).}
-#'   \item{muni_nm}{nome do municipio (original IBGE).}
-#'   \item{muni_nm_clean}{nome do municipio limpo (sem acentos, caixa alta).}
-#'   \item{uf_nm}{nome da UF original.}
-#'   \item{uf_sigla}{sigla da UF.}
-#'   \item{uf_id}{codigo IBGE da UF.}
-#'   \item{regiao_nm}{nome da regiao.}
-#'   \item{tse_id}{codigo TSE do municipio.}
-#'   \item{rf_id}{codigo Receita Federal do municipio.}
-#'   \item{bcb_id}{codigo do Banco Central do Brasil do municipio.}
-#'   \item{existia_1991}{1 se municipio existia em 1991, 0 caso contrario.}
-#'   \item{existia_2000}{1 se municipio existia em 2000, 0 caso contrario.}
-#'   \item{existia_2010}{1 se municipio existia em 2010, 0 caso contrario.}
-#'   \item{lon}{longitude baseada no centroide do shapefile.}
-#'   \item{lat}{latitude baseada no centroide do shapefile.}
-#'   \item{capital}{TRUE se capital da UF, FALSE caso contrario.}
+#'   \item{muni_id}{code IBGE (7 digits).}
+#'   \item{muni_id_6}{code (6 digits).}
+#'   \item{muni_nm}{municipality name (original IBGE).}
+#'   \item{muni_nm_clean}{clean municipality name (without accents, upper case).}
+#'   \item{uf_nm}{name of the original UF.}
+#'   \item{uf_sigla}{initials UF.}
+#'   \item{uf_id}{code of IBGE UF.}
+#'   \item{regiao_nm}{region name.}
+#'   \item{tse_id}{municipality TSE code.}
+#'   \item{rf_id}{Receita Federal code of the municipality.}
+#'   \item{bcb_id}{code of the Central Bank of Brazil of the municipality.}
+#'   \item{existia_1991}{1 if municipality existed in 1991, 0 otherwise.}
+#'   \item{existia_2000}{1 if municipality existed in 2000, 0 otherwise.}
+#'   \item{existia_2010}{1 if municipality existed in 2010, 0 otherwise.}
+#'   \item{lon}{longitude based on shapefile centroid.}
+#'   \item{lat}{latitude based on shapefile centroid.}
+#'   \item{capital}{TRUE if UF capital, FALSE otherwise.}
 #' }
 #'
-#' @source base do pacote geobr enriquecida com dados do TSE e centroides
+#' @source geobr package base enriched with TSE and centroids data
 #'
 #' @examples
 #'
@@ -53,12 +53,13 @@
 
 #' pnud_muni
 #'
-#' Um conjunto de dados que contém informações sobre PNUD de municipios e UFs.
+#' A dataset that contains information about UNDP for municipalities and UFs.
 #'
-#' @format um data frame com 16695 linhas e 238 variaveis.
-#' Considerada a unidade observacional ano-municipio.
+#' @format a data frame with 16695 lines e 238 variables.
 #'
-#' \describe{mais informacoes consulte a pnud_siglas}
+#' Considered the year-municipal observational unit.
+#'
+#' \describe{more information see the pnud_siglas.}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 #'
@@ -67,14 +68,14 @@
 
 #' pnud_siglas
 #'
-#' Um conjuto de dados que serve como glossario das siglas disponiveis.
+#' A dataset that serves as a glossary of available acronyms.
 #'
-#' @format um data frame com 237 e 4 variaveis:
+#' @format a data frame with 237 lines e 4 variables:
 #' \describe{
-#'   \item{sigla}{todas as siglas disponiveis}
-#'   \item{nome curto}{nome curto da sigla}
-#'   \item{nome longo}{nome longo da sigla}
-#'   \item{definicao}{definicao da sigla}
+#'   \item{sigla}{all acronyms available. }
+#'   \item{nome curto}{short name of the acronym.}
+#'   \item{nome longo}{long name of the acronym.}
+#'   \item{definicao}{definition of acronym.}
 #' }
 #'
 #' @source pnud_siglas
@@ -86,12 +87,12 @@
 
 #' pnud_uf
 #'
-#' Um conjunto de dados que contem informacoes sobre PNUD de Unidades Federativas.
-#' Considerada a unidade observacional ano-uf.
+#' A dataset that contains information about PNUD of Federative Units.
+#' Considered the observational unit year-uf.
 #'
-#' @format um data frame com 81 linhas e 235 variaveis.
+#' @format a data frame with 81 lines e 235 variables.
 #'
-#' \describe{mais informações consulte a pnud_siglas}
+#' \describe{more information see the pnud_siglas.}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}
 #'
@@ -103,11 +104,11 @@
 
 #' pnud_min
 #'
-#' Um conjunto de dados que contém informações sobre PNUD de municípios por anos.
+#' A dataset that contains PNUD information for municipalities by years.
 #'
-#' @format um data frame com 16686 linhas e 14 variaveis.
+#' @format a data frame woth 16686 lines e 14 variables.
 #'
-#' \describe{mais informações consulte a pnud_siglas}
+#' \describe{more information see the pnud_siglas.}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 #'
@@ -118,28 +119,28 @@
 
 #' assuntos
 #'
-#' Um conjunto de dados que contém informações sobre cifras ocultas.
+#' A dataset that contains information about hidden ciphers.
 #'
-#' @format um data frame com 37022 linhas e 16 variaveis.
+#' @format a data frame with 37022 lines e 16 variables.
 #'
 #' \describe{
-#'   \item{tribunal}{indica qual é o tribunal respectivo}
-#'   \item{ano}{ano do assunto}
-#'   \item{assunto_generico}{assunto genérico}
-#'   \item{assunto_nome1}{1ª ramificação}
-#'   \item{assunto_nome2}{2ª ramificação}
-#'   \item{assunto_nome3}{3ª ramificação}
-#'   \item{assunto_nome4}{4ª ramificação}
-#'   \item{assunto_nome5}{5ª ramificação}
-#'   \item{assunto_nome6}{6ª ramificação}
-#'   \item{assunto_nome7}{7ª ramificação}
-#'   \item{codigos}{codigo relacionados ao assunto}
-#'   \item{assun_cod_inst}{codigos da instancia}
-#'   \item{x1_grau}{numeros de casos em 1° grau}
-#'   \item{x2_grau}{numeros de casos em 2° grau}
-#'   \item{juizado_especial}{numeros de casos no juizado especial}
-#'   \item{turma_especial}{numeros de casos na turma especial}
-#'   \item{total}{total de casos}
+#'   \item{tribunal}{indicates which court is concerned.}
+#'   \item{ano}{subject year.}
+#'   \item{assunto_generico}{generic subject.}
+#'   \item{assunto_nome1}{1st branch.}
+#'   \item{assunto_nome2}{2st branch.}
+#'   \item{assunto_nome3}{3st branch.}
+#'   \item{assunto_nome4}{4st branch.}
+#'   \item{assunto_nome5}{5st branch.}
+#'   \item{assunto_nome6}{6st branch.}
+#'   \item{assunto_nome7}{7st branch.}
+#'   \item{codigos}{code related to the subject.}
+#'   \item{assun_cod_inst}{instance codes.}
+#'   \item{x1_grau}{number of cases in 1st degree.}
+#'   \item{x2_grau}{number of cases in 2nd degree.}
+#'   \item{juizado_especial}{number of cases in the special court.}
+#'   \item{turma_especial}{number of cases in the special class.}
+#'   \item{total}{total cases.}
 #' }
 #'
 #' @source \url{https://www.cnj.jus.br/}
@@ -149,21 +150,21 @@
 #' summary(assuntos)
 'assuntos'
 
-#' Jurisprudencia consumidor
+#' consumo
 #'
-#' Base retrospectiva para utilizar em exemplos do livro.
+#' Retrospective basis to use in book examples.
 #'
-#' @format um data frame com 37022 linhas e 16 variaveis.
+#' @format a data frame with 37022 lines e 16 variables.
 #'
 #' \describe{
-#'   \item{id_processo}{numero identificador do processo (apelacao)}
-#'   \item{assunto}{assunto do processo}
-#'   \item{valor}{valor da causa}
-#'   \item{tipo_litigio}{configuracao das partes no litigio}
-#'   \item{dec_val}{decisao de segundo grau}
-#'   \item{dec_unanime}{unanimidade}
-#'   \item{dec_date}{data da decisao}
-#'   \item{tempo}{tempo do recurso, em dias}
+#'   \item{id_processo}{process identifier number (appeal).}
+#'   \item{assunto}{subject of the process.}
+#'   \item{valor}{value of cause.}
+#'   \item{tipo_litigio}{configuration of the parties to the dispute.}
+#'   \item{dec_val}{second degree decision.}
+#'   \item{dec_unanime}{unanimity.}
+#'   \item{dec_date}{decision date.}
+#'   \item{tempo}{resource time, in days.}
 #' }
 #'
 #' @source \url{https://abj.org.br/}
@@ -175,20 +176,20 @@
 
 #' Leiloes
 #'
-#' Base sobre leiloes
+#' Base on auctions
 #'
-#' @format um data frame com 37022 linhas e 16 variaveis.
+#' @format a data frame with 37022 lines e 16 variables.
 #'
 #' \describe{
-#'   \item{id_processo}{numero identificador do processo (apelacao)}
-#'   \item{descricao}{descricao do item}
-#'   \item{id_leiloeiro}{ID do leiloeiro}
-#'   \item{tipo_remuneracao}{Tipo de remuneração do leiloeiro}
-#'   \item{modalidade}{modalidade do leilão}
-#'   \item{tipo}{tipo de leilão}
-#'   \item{vendeu}{o item foi vendido?}
-#'   \item{valor_avaliacao_inicial}{valor avaliado}
-#'   \item{valor_total_arrematado}{valor arrematado}
+#'   \item{id_processo}{process identifier number (appeal).}
+#'   \item{descricao}{item description.}
+#'   \item{id_leiloeiro}{Auctioneer ID.}
+#'   \item{tipo_remuneracao}{Auctioneer compensation type.}
+#'   \item{modalidade}{auction mode.}
+#'   \item{tipo}{auction type.}
+#'   \item{vendeu}{was the item sold?}
+#'   \item{valor_avaliacao_inicial}{appraised value.}
+#'   \item{valor_total_arrematado}{auctioned value.}
 #' }
 #'
 #' @source \url{https://obs.abj.org.br/}

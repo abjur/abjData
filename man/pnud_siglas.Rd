@@ -5,12 +5,12 @@
 \alias{pnud_siglas}
 \title{pnud_siglas}
 \format{
-um data frame com 237 e 4 variaveis:
+a data frame with 237 lines e 4 variables:
 \describe{
-  \item{sigla}{todas as siglas disponiveis}
-  \item{nome curto}{nome curto da sigla}
-  \item{nome longo}{nome longo da sigla}
-  \item{definicao}{definicao da sigla}
+  \item{sigla}{all acronyms available. }
+  \item{nome curto}{short name of the acronym.}
+  \item{nome longo}{long name of the acronym.}
+  \item{definicao}{definition of acronym.}
 }
 }
 \source{
@@ -20,7 +20,7 @@ pnud_siglas
 pnud_siglas
 }
 \description{
-Um conjuto de dados que serve como glossario das siglas disponiveis.
+A dataset that serves as a glossary of available acronyms.
 }
 \examples{
 

@@ -83,7 +83,7 @@ muni <- da_muni_clean %>%
   left_join(aux_latlon, "muni_id"),
   mutate(capital = muni_id %in% aux_capital$capital)
 
-# os faltantes sao as lagoas do RS
+# the missing are the Lagoas of RS
 faltantes <- da_muni_clean %>%
   anti_join(tse_id, "muni_id")
 

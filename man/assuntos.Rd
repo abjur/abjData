@@ -5,26 +5,26 @@
 \alias{assuntos}
 \title{assuntos}
 \format{
-um data frame com 37022 linhas e 16 variaveis.
+a data frame with 37022 lines e 16 variables.
 
 \describe{
-  \item{tribunal}{indica qual é o tribunal respectivo}
-  \item{ano}{ano do assunto}
-  \item{assunto_generico}{assunto genérico}
-  \item{assunto_nome1}{1ª ramificação}
-  \item{assunto_nome2}{2ª ramificação}
-  \item{assunto_nome3}{3ª ramificação}
-  \item{assunto_nome4}{4ª ramificação}
-  \item{assunto_nome5}{5ª ramificação}
-  \item{assunto_nome6}{6ª ramificação}
-  \item{assunto_nome7}{7ª ramificação}
-  \item{codigos}{codigo relacionados ao assunto}
-  \item{assun_cod_inst}{codigos da instancia}
-  \item{x1_grau}{numeros de casos em 1° grau}
-  \item{x2_grau}{numeros de casos em 2° grau}
-  \item{juizado_especial}{numeros de casos no juizado especial}
-  \item{turma_especial}{numeros de casos na turma especial}
-  \item{total}{total de casos}
+  \item{tribunal}{indicates which court is concerned.}
+  \item{ano}{subject year.}
+  \item{assunto_generico}{generic subject.}
+  \item{assunto_nome1}{1st branch.}
+  \item{assunto_nome2}{2st branch.}
+  \item{assunto_nome3}{3st branch.}
+  \item{assunto_nome4}{4st branch.}
+  \item{assunto_nome5}{5st branch.}
+  \item{assunto_nome6}{6st branch.}
+  \item{assunto_nome7}{7st branch.}
+  \item{codigos}{code related to the subject.}
+  \item{assun_cod_inst}{instance codes.}
+  \item{x1_grau}{number of cases in 1st degree.}
+  \item{x2_grau}{number of cases in 2nd degree.}
+  \item{juizado_especial}{number of cases in the special court.}
+  \item{turma_especial}{number of cases in the special class.}
+  \item{total}{total cases.}
 }
 }
 \source{
@@ -34,7 +34,7 @@ um data frame com 37022 linhas e 16 variaveis.
 assuntos
 }
 \description{
-Um conjunto de dados que contém informações sobre cifras ocultas.
+A dataset that contains information about hidden ciphers.
 }
 \examples{
 

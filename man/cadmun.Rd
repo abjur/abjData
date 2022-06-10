@@ -5,10 +5,10 @@
 \alias{cadmun}
 \title{cadmun}
 \format{
-um data frame com 5657 e 35 variaveis:
+a data frame with 5657 lines e 35 variables:
 
-\describe{conjunto de codigos dos municipios e sua situacao, contendo
-informacoes sobre fronteira, amazonia, capital, longitude, latitude, entre outros}
+\describe{set of codes of the municipalities and their situation, containing
+information about border, amazonia, capital, longitude, latitude, among others}
 }
 \source{
 cadmun
@@ -17,8 +17,8 @@ cadmun
 cadmun
 }
 \description{
-Um conjunto de dados que contem os codigos de cadastro municipal.
-A base esta desatualizada, pois nao considera todos os municipios.
+A dataset that contains the municipal cadastre codes.
+The database is outdated, as it does not consider all municipalities.
 }
 \examples{
 
