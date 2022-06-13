@@ -3,19 +3,19 @@
 \docType{data}
 \name{consumo}
 \alias{consumo}
-\title{consumo}
+\title{Consumer cases}
 \format{
-a data frame with 37022 lines e 16 variables.
+a data frame with 1000 rows and 9 columns.
 
 \describe{
-  \item{id_processo}{process identifier number (appeal).}
-  \item{assunto}{subject of the process.}
-  \item{valor}{value of cause.}
-  \item{tipo_litigio}{configuration of the parties to the dispute.}
-  \item{dec_val}{second degree decision.}
-  \item{dec_unanime}{unanimity.}
-  \item{dec_date}{decision date.}
-  \item{tempo}{resource time, in days.}
+\item{id_processo}{case identifier number (appeal).}
+\item{assunto}{type of the case.}
+\item{valor}{value of cause.}
+\item{tipo_litigio}{configuration of the parties to the dispute.}
+\item{dec_val}{second instance decision.}
+\item{dec_unanime}{unanimity.}
+\item{dec_date}{decision date.}
+\item{tempo}{case time, in days.}
 }
 }
 \source{

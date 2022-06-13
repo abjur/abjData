@@ -3,13 +3,13 @@
 \docType{data}
 \name{pnud_muni}
 \alias{pnud_muni}
-\title{pnud_muni}
+\title{UNDP data by Municipality}
 \format{
-a data frame with 16695 lines e 238 variables.
+a data frame with 16695 rows and 124 columns.
 
-Considered the year-municipal observational unit.
+Considered the year municipality observational unit.
 
-\describe{more information see the pnud_siglas.}
+\describe{for more information, check \link{pnud_siglas}.}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
@@ -20,6 +20,6 @@ summary(pnud_muni)
 pnud_muni
 }
 \description{
-A dataset that contains information about UNDP for municipalities and UFs.
+A dataset that contains information about UNDP for municipalities and federative units.
 }
 \keyword{datasets}

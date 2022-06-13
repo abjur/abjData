@@ -3,28 +3,28 @@
 \docType{data}
 \name{assuntos}
 \alias{assuntos}
-\title{assuntos}
+\title{Case types}
 \format{
-a data frame with 37022 lines e 16 variables.
+a data frame with 37022 lines and 15 variables.
 
 \describe{
-  \item{tribunal}{indicates which court is concerned.}
-  \item{ano}{subject year.}
-  \item{assunto_generico}{generic subject.}
-  \item{assunto_nome1}{1st branch.}
-  \item{assunto_nome2}{2st branch.}
-  \item{assunto_nome3}{3st branch.}
-  \item{assunto_nome4}{4st branch.}
-  \item{assunto_nome5}{5st branch.}
-  \item{assunto_nome6}{6st branch.}
-  \item{assunto_nome7}{7st branch.}
-  \item{codigos}{code related to the subject.}
-  \item{assun_cod_inst}{instance codes.}
-  \item{x1_grau}{number of cases in 1st degree.}
-  \item{x2_grau}{number of cases in 2nd degree.}
-  \item{juizado_especial}{number of cases in the special court.}
-  \item{turma_especial}{number of cases in the special class.}
-  \item{total}{total cases.}
+\item{tribunal}{indicates which court is concerned.}
+\item{ano}{subject year.}
+\item{assunto_generico}{generic subject.}
+\item{assunto_nome1}{1st branch.}
+\item{assunto_nome2}{2st branch.}
+\item{assunto_nome3}{3st branch.}
+\item{assunto_nome4}{4st branch.}
+\item{assunto_nome5}{5st branch.}
+\item{assunto_nome6}{6st branch.}
+\item{assunto_nome7}{7st branch.}
+\item{codigos}{code related to the subject.}
+\item{assun_cod_inst}{instance codes.}
+\item{x1_grau}{number of cases in first instance.}
+\item{x2_grau}{number of cases in second instance.}
+\item{juizado_especial}{number of cases in the special court.}
+\item{turma_especial}{number of cases in the special class.}
+\item{total}{total cases.}
 }
 }
 \source{
@@ -34,7 +34,7 @@ a data frame with 37022 lines e 16 variables.
 assuntos
 }
 \description{
-A dataset that contains information about hidden ciphers.
+A dataset contains information about case types in Brazil.
 }
 \examples{
 

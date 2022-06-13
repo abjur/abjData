@@ -3,12 +3,12 @@
 \docType{data}
 \name{cadmun}
 \alias{cadmun}
-\title{cadmun}
+\title{Municipality info (legacy)}
 \format{
-a data frame with 5657 lines e 35 variables:
+a data frame with 5657 rows e 35 variables:
 
 \describe{set of codes of the municipalities and their situation, containing
-information about border, amazonia, capital, longitude, latitude, among others}
+information about border, Amazon, capital, longitude, latitude, among others}
 }
 \source{
 cadmun
@@ -17,7 +17,7 @@ cadmun
 cadmun
 }
 \description{
-A dataset that contains the municipal cadastre codes.
+A dataset containing the municipality codes.
 The database is outdated, as it does not consider all municipalities.
 }
 \examples{

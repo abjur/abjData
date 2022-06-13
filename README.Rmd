@@ -22,34 +22,33 @@ knitr::opts_chunk$set(
 
 ## Overview
 
-This package contains a set of databases frequently used by the Brazilian Association of Jurimetry.
+This package contains a set of databases frequently used by ABJ.
  
-The data included comes from the Human Development Index of the municipalities, collected from the [Atlas do Desenvolvimento Humano](https://www.atlasbrasil.org.br/) and [cartographic databases](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
+The data included comes from the Human Development Index of the municipalities, collected from the [Human Development Atlas](https://www.atlasbrasil.org.br/) and [cartographic databases](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
 
-The purpose of the package is to make databases available for quick use in other projects.
+The purpose of the package is to make databases available for quick use in other projects and as a resource for the Jurimetrics book.
 
-## For installing
-
-To install from one of the repositories, you need to have the `{remotes}` package installed.
+## Installation
 
 ```{r eval=FALSE}
-# For installing remotes package
-install.packages("remotes")
-# For installing the GitHub (dev) version
-remotes::install_github("abjur/abjData")
+install.packages("abjData")
+## dev version
+# remotes::install_github("abjur/abjData")
 ```
 
-## Available bases
+## Available datasets
 
-Base      | Description
+Dataset      | Description
 ----------|----------
-`assuntos`| Data that contains information about hidden ciphers.
-`cadmun`  | (LEGACY) A dataset that contains the municipal cadastre codes.
+`assuntos`| Data that contains information about case types.
+`cadmun`  | (LEGACY) A dataset that contains the municipality codes.
 `muni`  | Useful data from municipalities to join with other databases.
 `pnud_muni`| A dataset containing UNDP information from municipalities by years.
-`pnud_min`| Minimal base of PNUD municipalities to make quick analyzes
+`pnud_min`| Minimal base of UNDP municipalities to make quick studies.
 `pnud_siglas`| A dataset that serves as a glossary of available acronyms. 
-`pnud_uf`|A dataset that contains information about PNUD of Federative Units.
+`pnud_uf`| A dataset that contains information about UNDP of Federative Units.
+`leiloes`| Auctions dataset used in our book.
+`consumo`| Consumer cases dataset used in our book.
 
 ## How to use
 
@@ -58,7 +57,7 @@ Once installed, just load the package and call the dataset you want to use.
 The `{abjData}` package can be loaded like any other R package:
 
 ```{r message = FALSE}
-library(abjData) # Carrega o pacote
+library(abjData)
 library(tidyverse)
 ```
 
@@ -68,22 +67,22 @@ glimpse(pnud_siglas)
 
 ### Chart examples
 
-IDH-Municipal:
+Municipal Human Development Index:
 
 ```{r fig-idhm}
 
-pnud_min %>%
-  pivot_longer(starts_with("idhm")) %>% 
+pnud_min |>
+  pivot_longer(starts_with("idhm")) |> 
   mutate(tipo = case_when(
     name == "idhm" ~ "Geral",
-    name == "idhm_e" ~ "Educação",
-    name == "idhm_l" ~ "Longevidade",
-    name == "idhm_r" ~ "Renda"
-  )) %>% 
+    name == "idhm_e" ~ "Education",
+    name == "idhm_l" ~ "Longevity",
+    name == "idhm_r" ~ "Income"
+  )) |> 
   mutate(
     regiao_nm = fct_reorder(regiao_nm, value, median, .desc = TRUE),
     tipo = lvls_reorder(tipo, c(2, 1, 3, 4))
-  ) %>% 
+  ) |> 
   ggplot() +
   geom_boxplot(
     aes(value, regiao_nm), 
@@ -95,7 +94,7 @@ pnud_min %>%
   theme_bw(12) +
   labs(
     x = "IDHM", 
-    y = "Região"
+    y = "Region"
   )
 
 ```
@@ -103,7 +102,7 @@ pnud_min %>%
 Position of municipalities:
 
 ```{r}
-muni %>% 
+muni |> 
   ggplot(aes(lon, lat)) +
   geom_point(size = .1, colour = viridis::viridis(2, begin = .2, end = .8)[1]) +
   coord_equal() +
@@ -111,11 +110,10 @@ muni %>%
 ```
 
 
-
 ## Requirements
 
-`{abjData}` requires an R version greater than or equal to 3.4.
+`{abjData}` requires R version greater than or equal to 3.4.
 
-## Licence
+## License
 
-`{abjData}` is licensed under the terms [MIT](https://github.com/abjur/abjData/blob/master/LICENSE).
+`{abjData}` is licensed under the [MIT License](https://github.com/abjur/abjData/blob/master/LICENSE).

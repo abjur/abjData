@@ -3,20 +3,20 @@
 \docType{data}
 \name{leiloes}
 \alias{leiloes}
-\title{Leiloes}
+\title{Auctions}
 \format{
-a data frame with 37022 lines e 16 variables.
+a data frame with 1000 rows and 10 columns.
 
 \describe{
-  \item{id_processo}{process identifier number (appeal).}
-  \item{descricao}{item description.}
-  \item{id_leiloeiro}{Auctioneer ID.}
-  \item{tipo_remuneracao}{Auctioneer compensation type.}
-  \item{modalidade}{auction mode.}
-  \item{tipo}{auction type.}
-  \item{vendeu}{was the item sold?}
-  \item{valor_avaliacao_inicial}{appraised value.}
-  \item{valor_total_arrematado}{auctioned value.}
+\item{id_processo}{case identifier number.}
+\item{descricao}{item description.}
+\item{id_leiloeiro}{Auctioneer ID.}
+\item{tipo_remuneracao}{Auctioneer compensation type.}
+\item{modalidade}{auction mode.}
+\item{tipo}{auction type.}
+\item{vendeu}{was the item sold?}
+\item{valor_avaliacao_inicial}{appraised value.}
+\item{valor_total_arrematado}{auctioned value.}
 }
 }
 \source{
@@ -26,7 +26,7 @@ a data frame with 37022 lines e 16 variables.
 leiloes
 }
 \description{
-Base on auctions
+Auctions sample dataset used in our book.
 }
 \examples{
 

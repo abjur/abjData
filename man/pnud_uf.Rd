@@ -3,11 +3,11 @@
 \docType{data}
 \name{pnud_uf}
 \alias{pnud_uf}
-\title{pnud_uf}
+\title{UNDP data by Federative Units}
 \format{
-a data frame with 81 lines e 235 variables.
+a data frame with 81 rows e 235 columns.
 
-\describe{more information see the pnud_siglas.}
+\describe{for more information check \link{pnud_siglas}.}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}
@@ -16,8 +16,7 @@ a data frame with 81 lines e 235 variables.
 pnud_uf
 }
 \description{
-A dataset that contains information about PNUD of Federative Units.
-Considered the observational unit year-uf.
+A dataset that contains information about UNDP of Federative Units.
 }
 \examples{
 

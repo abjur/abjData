@@ -3,11 +3,11 @@
 \docType{data}
 \name{pnud_min}
 \alias{pnud_min}
-\title{pnud_min}
+\title{UNDP minimal dataset}
 \format{
-a data frame woth 16686 lines e 14 variables.
+a data frame with 16686 rows and 15 columns.
 
-\describe{more information see the pnud_siglas.}
+\describe{for more information check \link{pnud_siglas}.}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
@@ -16,10 +16,10 @@ a data frame woth 16686 lines e 14 variables.
 pnud_min
 }
 \description{
-A dataset that contains PNUD information for municipalities by years.
+A dataset that contains UNDP information for municipalities by years.
 }
 \examples{
 
-summary(pnud_siglas)
+summary(pnud_min)
 }
 \keyword{datasets}

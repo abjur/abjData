@@ -3,40 +3,40 @@
 \docType{data}
 \name{muni}
 \alias{muni}
-\title{muni}
+\title{Municipality info}
 \format{
-a data frame with 5572 lines e 16 varibles:
+a data frame with 5572 rows and 17 columns:
 
 \describe{
-  \item{muni_id}{code IBGE (7 digits).}
-  \item{muni_id_6}{code (6 digits).}
-  \item{muni_nm}{municipality name (original IBGE).}
-  \item{muni_nm_clean}{clean municipality name (without accents, upper case).}
-  \item{uf_nm}{name of the original UF.}
-  \item{uf_sigla}{initials UF.}
-  \item{uf_id}{code of IBGE UF.}
-  \item{regiao_nm}{region name.}
-  \item{tse_id}{municipality TSE code.}
-  \item{rf_id}{Receita Federal code of the municipality.}
-  \item{bcb_id}{code of the Central Bank of Brazil of the municipality.}
-  \item{existia_1991}{1 if municipality existed in 1991, 0 otherwise.}
-  \item{existia_2000}{1 if municipality existed in 2000, 0 otherwise.}
-  \item{existia_2010}{1 if municipality existed in 2010, 0 otherwise.}
-  \item{lon}{longitude based on shapefile centroid.}
-  \item{lat}{latitude based on shapefile centroid.}
-  \item{capital}{TRUE if UF capital, FALSE otherwise.}
+\item{muni_id}{IBGE code (7 digits).}
+\item{muni_id_6}{IBGE code (6 digits).}
+\item{muni_nm}{Municipality name (original IBGE).}
+\item{muni_nm_clean}{Clean municipality name (without accents, upper case).}
+\item{uf_nm}{Name of the original federative unit.}
+\item{uf_sigla}{Federative unit initials.}
+\item{uf_id}{code of IBGE federative unit.}
+\item{regiao_nm}{region name.}
+\item{tse_id}{municipality TSE code.}
+\item{rf_id}{Brazilian Federal Revenue code of the municipality.}
+\item{bcb_id}{Central Bank of Brazil code of the municipality.}
+\item{existia_1991}{1 if municipality existed in 1991, 0 otherwise.}
+\item{existia_2000}{1 if municipality existed in 2000, 0 otherwise.}
+\item{existia_2010}{1 if municipality existed in 2010, 0 otherwise.}
+\item{lon}{longitude based on shapefile centroid.}
+\item{lat}{latitude based on shapefile centroid.}
+\item{capital}{TRUE if federative unit is a capital, FALSE otherwise.}
 }
 }
 \source{
-geobr package base enriched with TSE and centroids data
+Municipalities dataset enriched with external data.
 }
 \usage{
 muni
 }
 \description{
-A dataset that contains data useful for joining
-with city bases, such as city codes, tse code,
-acronym/name/code of the UFs and region.
+A dataset containing useful data for joining
+with city datasets, such as city codes,
+acronyms of the federative units and regions.
 }
 \examples{
 

@@ -1,12 +1,12 @@
-#' cadmun
+#' Municipality info (legacy)
 #'
-#' A dataset that contains the municipal cadastre codes.
+#' A dataset containing the municipality codes.
 #' The database is outdated, as it does not consider all municipalities.
 #'
-#' @format a data frame with 5657 lines e 35 variables:
+#' @format a data frame with 5657 rows e 35 variables:
 #'
 #' \describe{set of codes of the municipalities and their situation, containing
-#' information about border, amazonia, capital, longitude, latitude, among others}
+#' information about border, Amazon, capital, longitude, latitude, among others}
 #'
 #' @source cadmun
 #'
@@ -15,35 +15,35 @@
 #' summary(cadmun)
 'cadmun'
 
-#' muni
+#' Municipality info
 #'
-#' A dataset that contains data useful for joining
-#' with city bases, such as city codes, tse code,
-#' acronym/name/code of the UFs and region.
+#' A dataset containing useful data for joining
+#' with city datasets, such as city codes,
+#' acronyms of the federative units and regions.
 #'
-#' @format a data frame with 5572 lines e 16 varibles:
+#' @format a data frame with 5572 rows and 17 columns:
 #'
 #' \describe{
-#'   \item{muni_id}{code IBGE (7 digits).}
-#'   \item{muni_id_6}{code (6 digits).}
-#'   \item{muni_nm}{municipality name (original IBGE).}
-#'   \item{muni_nm_clean}{clean municipality name (without accents, upper case).}
-#'   \item{uf_nm}{name of the original UF.}
-#'   \item{uf_sigla}{initials UF.}
-#'   \item{uf_id}{code of IBGE UF.}
+#'   \item{muni_id}{IBGE code (7 digits).}
+#'   \item{muni_id_6}{IBGE code (6 digits).}
+#'   \item{muni_nm}{Municipality name (original IBGE).}
+#'   \item{muni_nm_clean}{Clean municipality name (without accents, upper case).}
+#'   \item{uf_nm}{Name of the original federative unit.}
+#'   \item{uf_sigla}{Federative unit initials.}
+#'   \item{uf_id}{code of IBGE federative unit.}
 #'   \item{regiao_nm}{region name.}
 #'   \item{tse_id}{municipality TSE code.}
-#'   \item{rf_id}{Receita Federal code of the municipality.}
-#'   \item{bcb_id}{code of the Central Bank of Brazil of the municipality.}
+#'   \item{rf_id}{Brazilian Federal Revenue code of the municipality.}
+#'   \item{bcb_id}{Central Bank of Brazil code of the municipality.}
 #'   \item{existia_1991}{1 if municipality existed in 1991, 0 otherwise.}
 #'   \item{existia_2000}{1 if municipality existed in 2000, 0 otherwise.}
 #'   \item{existia_2010}{1 if municipality existed in 2010, 0 otherwise.}
 #'   \item{lon}{longitude based on shapefile centroid.}
 #'   \item{lat}{latitude based on shapefile centroid.}
-#'   \item{capital}{TRUE if UF capital, FALSE otherwise.}
+#'   \item{capital}{TRUE if federative unit is a capital, FALSE otherwise.}
 #' }
 #'
-#' @source geobr package base enriched with TSE and centroids data
+#' @source Municipalities dataset enriched with external data.
 #'
 #' @examples
 #'
@@ -51,48 +51,47 @@
 'muni'
 
 
-#' pnud_muni
+#' UNDP data by Municipality
 #'
-#' A dataset that contains information about UNDP for municipalities and UFs.
+#' A dataset that contains information about UNDP for municipalities and federative units.
 #'
-#' @format a data frame with 16695 lines e 238 variables.
+#' @format a data frame with 16695 rows and 124 columns.
 #'
-#' Considered the year-municipal observational unit.
+#' Considered the year municipality observational unit.
 #'
-#' \describe{more information see the pnud_siglas.}
+#' \describe{for more information, check [pnud_siglas].}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 #'
 #' summary(pnud_muni)
 'pnud_muni'
 
-#' pnud_siglas
+#' UNDP Acronyms
 #'
-#' A dataset that serves as a glossary of available acronyms.
+#' A dataset that serves as a glossary of available variables.
 #'
-#' @format a data frame with 237 lines e 4 variables:
+#' @format a data frame with 236 rows e 4 columns:
 #' \describe{
 #'   \item{sigla}{all acronyms available. }
-#'   \item{nome curto}{short name of the acronym.}
-#'   \item{nome longo}{long name of the acronym.}
+#'   \item{nome curto}{short name of the variable.}
+#'   \item{nome longo}{long name of the variable.}
 #'   \item{definicao}{definition of acronym.}
 #' }
 #'
-#' @source pnud_siglas
+#' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 #'
 #' @examples
 #'
 #' summary(pnud_siglas)
 'pnud_siglas'
 
-#' pnud_uf
+#' UNDP data by Federative Units
 #'
-#' A dataset that contains information about PNUD of Federative Units.
-#' Considered the observational unit year-uf.
+#' A dataset that contains information about UNDP of Federative Units.
 #'
-#' @format a data frame with 81 lines e 235 variables.
+#' @format a data frame with 81 rows e 235 columns.
 #'
-#' \describe{more information see the pnud_siglas.}
+#' \describe{for more information check [pnud_siglas].}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}
 #'
@@ -102,26 +101,26 @@
 'pnud_uf'
 
 
-#' pnud_min
+#' UNDP minimal dataset
 #'
-#' A dataset that contains PNUD information for municipalities by years.
+#' A dataset that contains UNDP information for municipalities by years.
 #'
-#' @format a data frame woth 16686 lines e 14 variables.
+#' @format a data frame with 16686 rows and 15 columns.
 #'
-#' \describe{more information see the pnud_siglas.}
+#' \describe{for more information check [pnud_siglas].}
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 #'
 #' @examples
 #'
-#' summary(pnud_siglas)
+#' summary(pnud_min)
 'pnud_min'
 
-#' assuntos
+#' Case types
 #'
-#' A dataset that contains information about hidden ciphers.
+#' A dataset contains information about case types in Brazil.
 #'
-#' @format a data frame with 37022 lines e 16 variables.
+#' @format a data frame with 37022 lines and 15 variables.
 #'
 #' \describe{
 #'   \item{tribunal}{indicates which court is concerned.}
@@ -136,8 +135,8 @@
 #'   \item{assunto_nome7}{7st branch.}
 #'   \item{codigos}{code related to the subject.}
 #'   \item{assun_cod_inst}{instance codes.}
-#'   \item{x1_grau}{number of cases in 1st degree.}
-#'   \item{x2_grau}{number of cases in 2nd degree.}
+#'   \item{x1_grau}{number of cases in first instance.}
+#'   \item{x2_grau}{number of cases in second instance.}
 #'   \item{juizado_especial}{number of cases in the special court.}
 #'   \item{turma_especial}{number of cases in the special class.}
 #'   \item{total}{total cases.}
@@ -150,21 +149,21 @@
 #' summary(assuntos)
 'assuntos'
 
-#' consumo
+#' Consumer cases
 #'
 #' Retrospective basis to use in book examples.
 #'
-#' @format a data frame with 37022 lines e 16 variables.
+#' @format a data frame with 1000 rows and 9 columns.
 #'
 #' \describe{
-#'   \item{id_processo}{process identifier number (appeal).}
-#'   \item{assunto}{subject of the process.}
+#'   \item{id_processo}{case identifier number (appeal).}
+#'   \item{assunto}{type of the case.}
 #'   \item{valor}{value of cause.}
 #'   \item{tipo_litigio}{configuration of the parties to the dispute.}
-#'   \item{dec_val}{second degree decision.}
+#'   \item{dec_val}{second instance decision.}
 #'   \item{dec_unanime}{unanimity.}
 #'   \item{dec_date}{decision date.}
-#'   \item{tempo}{resource time, in days.}
+#'   \item{tempo}{case time, in days.}
 #' }
 #'
 #' @source \url{https://abj.org.br/}
@@ -174,14 +173,14 @@
 #' summary(consumo)
 'consumo'
 
-#' Leiloes
+#' Auctions
 #'
-#' Base on auctions
+#' Auctions sample dataset used in our book.
 #'
-#' @format a data frame with 37022 lines e 16 variables.
+#' @format a data frame with 1000 rows and 10 columns.
 #'
 #' \describe{
-#'   \item{id_processo}{process identifier number (appeal).}
+#'   \item{id_processo}{case identifier number.}
 #'   \item{descricao}{item description.}
 #'   \item{id_leiloeiro}{Auctioneer ID.}
 #'   \item{tipo_remuneracao}{Auctioneer compensation type.}

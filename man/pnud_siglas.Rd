@@ -3,24 +3,24 @@
 \docType{data}
 \name{pnud_siglas}
 \alias{pnud_siglas}
-\title{pnud_siglas}
+\title{UNDP Acronyms}
 \format{
-a data frame with 237 lines e 4 variables:
+a data frame with 236 rows e 4 columns:
 \describe{
-  \item{sigla}{all acronyms available. }
-  \item{nome curto}{short name of the acronym.}
-  \item{nome longo}{long name of the acronym.}
-  \item{definicao}{definition of acronym.}
+\item{sigla}{all acronyms available. }
+\item{nome curto}{short name of the variable.}
+\item{nome longo}{long name of the variable.}
+\item{definicao}{definition of acronym.}
 }
 }
 \source{
-pnud_siglas
+\url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 }
 \usage{
 pnud_siglas
 }
 \description{
-A dataset that serves as a glossary of available acronyms.
+A dataset that serves as a glossary of available variables.
 }
 \examples{
 
