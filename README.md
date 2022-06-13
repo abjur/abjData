@@ -17,7 +17,8 @@ This package contains a set of databases frequently used by ABJ.
 
 The data included comes from the Human Development Index of the
 municipalities, collected from the [Human Development
-Atlas](https://www.atlasbrasil.org.br/) and [cartographic
+Atlas](https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html)
+and [cartographic
 databases](ftp://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2015/Shapefile/).
 
 The purpose of the package is to make databases available for quick use
