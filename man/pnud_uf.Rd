@@ -5,9 +5,9 @@
 \alias{pnud_uf}
 \title{pnud_uf}
 \format{
-um data frame com 81 linhas e 235 variaveis.
+a data frame with 81 lines e 235 variables.
 
-\describe{mais informações consulte a pnud_siglas}
+\describe{more information see the pnud_siglas.}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}
@@ -16,8 +16,8 @@ um data frame com 81 linhas e 235 variaveis.
 pnud_uf
 }
 \description{
-Um conjunto de dados que contem informacoes sobre PNUD de Unidades Federativas.
-Considerada a unidade observacional ano-uf.
+A dataset that contains information about PNUD of Federative Units.
+Considered the observational unit year-uf.
 }
 \examples{
 

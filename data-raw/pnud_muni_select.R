@@ -2,8 +2,8 @@
 
 readr::write_rds(pnud_muni, "data-raw/pnud_muni.rds", compress = "xz")
 
-# fizemos esse código para simplificar a base que vai no CRAN
-# mas aqui temos a base completa, de qualquer forma.
+# we made this code to simplify the base that goes in the CRAN
+# but here we have the complete base anyway.
 pnud_muni <- readr::read_rds("data-raw/pnud_muni.rds")
 pnud_muni <- pnud_muni |>
   dplyr::select(

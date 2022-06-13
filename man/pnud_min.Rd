@@ -5,9 +5,9 @@
 \alias{pnud_min}
 \title{pnud_min}
 \format{
-um data frame com 16686 linhas e 14 variaveis.
+a data frame woth 16686 lines e 14 variables.
 
-\describe{mais informações consulte a pnud_siglas}
+\describe{more information see the pnud_siglas.}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
@@ -16,7 +16,7 @@ um data frame com 16686 linhas e 14 variaveis.
 pnud_min
 }
 \description{
-Um conjunto de dados que contém informações sobre PNUD de municípios por anos.
+A dataset that contains PNUD information for municipalities by years.
 }
 \examples{
 
