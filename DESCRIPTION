@@ -1,6 +1,6 @@
 Package: abjData
 Title: Databases Used Routinely by the Brazilian Jurimetrics Association
-Version: 1.0.3.9000
+Version: 1.1.0
 Authors@R: 
     c(person(given = "Julio",
              family = "Trecenti",
@@ -31,6 +31,5 @@ Encoding: UTF-8
 LazyData: true
 URL: https://abjur.github.io/abjData/
 RoxygenNote: 7.2.0
-Imports: 
-    magrittr
 LazyDataCompression: xz
+Roxygen: list(markdown = TRUE)
