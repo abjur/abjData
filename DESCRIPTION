@@ -32,4 +32,3 @@ LazyData: true
 URL: https://abjur.github.io/abjData/
 RoxygenNote: 7.2.0
 LazyDataCompression: xz
-Roxygen: list(markdown = TRUE)
