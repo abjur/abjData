@@ -7,10 +7,10 @@
 \format{
 a data frame with 236 rows e 4 columns:
 \describe{
-\item{sigla}{all acronyms available. }
-\item{nome curto}{short name of the variable.}
-\item{nome longo}{long name of the variable.}
-\item{definicao}{definition of acronym.}
+  \item{sigla}{all acronyms available}
+  \item{nome curto}{short name of the variable}
+  \item{nome longo}{long name of the variable}
+  \item{definicao}{definition of acronym}
 }
 }
 \source{

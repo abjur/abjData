@@ -8,14 +8,14 @@
 a data frame with 1000 rows and 9 columns.
 
 \describe{
-\item{id_processo}{case identifier number (appeal).}
-\item{assunto}{type of the case.}
-\item{valor}{value of cause.}
-\item{tipo_litigio}{configuration of the parties to the dispute.}
-\item{dec_val}{second instance decision.}
-\item{dec_unanime}{unanimity.}
-\item{dec_date}{decision date.}
-\item{tempo}{case time, in days.}
+  \item{id_processo}{case identifier number (appeal)}
+  \item{assunto}{type of the case}
+  \item{valor}{value of cause}
+  \item{tipo_litigio}{configuration of the parties to the dispute}
+  \item{dec_val}{second instance decision}
+  \item{dec_unanime}{unanimity}
+  \item{dec_date}{decision date}
+  \item{tempo}{case time, in days}
 }
 }
 \source{
