@@ -5,13 +5,14 @@
 \alias{cadmun}
 \title{Municipality info (legacy)}
 \format{
-a data frame with 5657 rows e 35 variables:
+a data frame with 5657 rows and 35 variables:
 
-\describe{set of codes of the municipalities and their situation, containing
-information about border, Amazon, capital, longitude, latitude, among others}
+\describe{
+  \item{description}{set of codes of the municipalities and their situation, containing information about border, Amazon, capital, longitude, latitude, among others}
+}
 }
 \source{
-cadmun
+IBGE
 }
 \usage{
 cadmun

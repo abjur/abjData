@@ -7,7 +7,9 @@
 \format{
 a data frame with 16686 rows and 15 columns.
 
-\describe{for more information check \code{\link{pnud_siglas}}}
+\describe{
+  \item{ano}{for more information, check \code{\link{pnud_siglas}}}
+}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}

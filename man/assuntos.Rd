@@ -10,20 +10,18 @@ a data frame with 37022 lines and 15 variables.
 \describe{
   \item{tribunal}{indicates which court is concerned}
   \item{ano}{subject year}
-  \item{assunto_generico}{generic subject}
   \item{assunto_nome1}{first branch}
   \item{assunto_nome2}{second branch}
   \item{assunto_nome3}{third branch}
   \item{assunto_nome4}{fourth branch}
   \item{assunto_nome5}{fifth branch}
   \item{assunto_nome6}{sixth branch}
-  \item{assunto_nome7}{seventh branch}
-  \item{codigos}{code related to the subject}
-  \item{assun_cod_inst}{instance codes}
+  \item{generico}{generic code}
+  \item{codigo}{code related to the subject}
   \item{x1_grau}{number of cases in first instance}
   \item{x2_grau}{number of cases in second instance}
   \item{juizado_especial}{number of cases in the special court}
-  \item{turma_especial}{number of cases in the special class}
+  \item{turma_recursal}{number of cases in the special class}
   \item{total}{total cases}
 }
 }

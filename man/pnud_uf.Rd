@@ -7,7 +7,9 @@
 \format{
 a data frame with 81 rows e 235 columns.
 
-\describe{for more information check \code{\link{pnud_siglas}}}
+\describe{
+  \item{ano}{for more information, check \code{\link{pnud_siglas}}}
+}
 }
 \source{
 \url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}

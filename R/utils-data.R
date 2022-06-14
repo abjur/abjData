@@ -3,12 +3,13 @@
 #' A dataset containing the municipality codes.
 #' The database is outdated, as it does not consider all municipalities.
 #'
-#' @format a data frame with 5657 rows e 35 variables:
+#' @format a data frame with 5657 rows and 35 variables:
 #'
-#' \describe{set of codes of the municipalities and their situation, containing
-#' information about border, Amazon, capital, longitude, latitude, among others}
+#' \describe{
+#'   \item{description}{set of codes of the municipalities and their situation, containing information about border, Amazon, capital, longitude, latitude, among others}
+#' }
 #'
-#' @source cadmun
+#' @source IBGE
 #'
 #' @examples
 #'
@@ -59,7 +60,9 @@
 #'
 #' Considered the year municipality observational unit.
 #'
-#' \describe{for more information, check \code{\link{pnud_siglas}}}
+#' \describe{
+#'   \item{id}{for more information, check \code{\link{pnud_siglas}}}
+#' }
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 #'
@@ -71,10 +74,11 @@
 #' A dataset that serves as a glossary of available variables.
 #'
 #' @format a data frame with 236 rows e 4 columns:
+#'
 #' \describe{
 #'   \item{sigla}{all acronyms available}
-#'   \item{nome curto}{short name of the variable}
-#'   \item{nome longo}{long name of the variable}
+#'   \item{nome_curto}{short name of the variable}
+#'   \item{nome_longo}{long name of the variable}
 #'   \item{definicao}{definition of acronym}
 #' }
 #'
@@ -91,7 +95,9 @@
 #'
 #' @format a data frame with 81 rows e 235 columns.
 #'
-#' \describe{for more information check \code{\link{pnud_siglas}}}
+#' \describe{
+#'   \item{ano}{for more information, check \code{\link{pnud_siglas}}}
+#' }
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/rankings/idhm-uf-2010.html}
 #'
@@ -107,7 +113,9 @@
 #'
 #' @format a data frame with 16686 rows and 15 columns.
 #'
-#' \describe{for more information check \code{\link{pnud_siglas}}}
+#' \describe{
+#'   \item{ano}{for more information, check \code{\link{pnud_siglas}}}
+#' }
 #'
 #' @source \url{https://www.br.undp.org/content/brazil/pt/home/idh0/atlas-do-desenvolvimento-humano/atlas-dos-municipios.html}
 #'
@@ -125,20 +133,18 @@
 #' \describe{
 #'   \item{tribunal}{indicates which court is concerned}
 #'   \item{ano}{subject year}
-#'   \item{assunto_generico}{generic subject}
 #'   \item{assunto_nome1}{first branch}
 #'   \item{assunto_nome2}{second branch}
 #'   \item{assunto_nome3}{third branch}
 #'   \item{assunto_nome4}{fourth branch}
 #'   \item{assunto_nome5}{fifth branch}
 #'   \item{assunto_nome6}{sixth branch}
-#'   \item{assunto_nome7}{seventh branch}
-#'   \item{codigos}{code related to the subject}
-#'   \item{assun_cod_inst}{instance codes}
+#'   \item{generico}{generic code}
+#'   \item{codigo}{code related to the subject}
 #'   \item{x1_grau}{number of cases in first instance}
 #'   \item{x2_grau}{number of cases in second instance}
 #'   \item{juizado_especial}{number of cases in the special court}
-#'   \item{turma_especial}{number of cases in the special class}
+#'   \item{turma_recursal}{number of cases in the special class}
 #'   \item{total}{total cases}
 #' }
 #'
@@ -158,12 +164,13 @@
 #' \describe{
 #'   \item{id_processo}{case identifier number (appeal)}
 #'   \item{assunto}{type of the case}
+#'   \item{comarca}{municipality of the case}
 #'   \item{valor}{value of cause}
 #'   \item{tipo_litigio}{configuration of the parties to the dispute}
 #'   \item{dec_val}{second instance decision}
 #'   \item{dec_unanime}{unanimity}
 #'   \item{dec_date}{decision date}
-#'   \item{tempo}{case time, in days}
+#'   \item{tempo}{case time in days}
 #' }
 #'
 #' @source \url{https://abj.org.br/}
@@ -186,6 +193,7 @@
 #'   \item{tipo_remuneracao}{Auctioneer compensation type}
 #'   \item{modalidade}{auction mode}
 #'   \item{tipo}{auction type}
+#'   \item{data_edital}{auction date}
 #'   \item{vendeu}{was the item sold?}
 #'   \item{valor_avaliacao_inicial}{appraised value}
 #'   \item{valor_total_arrematado}{auctioned value}
