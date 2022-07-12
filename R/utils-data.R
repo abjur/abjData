@@ -205,3 +205,29 @@
 #'
 #' summary(leiloes)
 'leiloes'
+
+#' Litigation
+#'
+#' Litigation data from Brazil.
+#'
+#' @format a data frame with 1000 rows and 10 columns.
+#'
+#' \describe{
+#'   \item{justica}{Type of justice}
+#'   \item{ano}{Year}
+#'   \item{tribunal_uf}{State acronym}
+#'   \item{baixados}{Closed cases}
+#'   \item{novos}{New cases}
+#'   \item{pendentes}{Pending cases}
+#'   \item{idhm}{State Human Development Index}
+#'   \item{t_analf18m}{Illiteracy rate}
+#'   \item{rdpc}{Per capita income}
+#'   \item{pop}{population}
+#' }
+#'
+#' @source \url{https://abjur.shinyapps.io/obsCIEE/}
+#'
+#' @examples
+#'
+#' summary(litigiosidade)
+'litigiosidade'
