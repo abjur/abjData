@@ -231,3 +231,63 @@
 #'
 #' summary(litigiosidade)
 'litigiosidade'
+
+#' datajud_mg
+#'
+#' Example data extracted from datajud
+#'
+#' @format a data frame with 2666 rows and 16 columns.
+#'
+#' \describe{
+#'   \item{ano}{Year}
+#'   \item{mes}{Month}
+#'   \item{data_de_referencia}{Distribution date}
+#'   \item{tribunal}{Tribunal acronym}
+#'   \item{nome_orgao}{Court}
+#'   \item{codigo_orgao}{Court subarea's code}
+#'   \item{municipio}{Municipality}
+#'   \item{uf}{State}
+#'   \item{grau}{Lawsuit degree}
+#'   \item{formato}{Format}
+#'   \item{procedimento}{Procedure type}
+#'   \item{recurso_originario}{Originary procedure}
+#'   \item{processo}{Lawsuit number}
+#'   \item{nivel_de_sigilo}{Disclosure level}
+#'   \item{classe}{Class type name}
+#'   \item{codigo_classe}{Class type code}
+#' }
+#'
+#' @source \url{https://painel-estatistica.stg.cloud.cnj.jus.br/estatisticas.html}
+#'
+#' @examples
+#'
+#' summary(datajud_mg)
+'datajud_mg'
+
+#' da_cpopg
+#'
+#' Example data extracted from tjsp/cpopg
+#'
+#' @format a data frame with 377 rows and 13 columns.
+#'
+#' \describe{
+#'   \item{id_processo}{Procces number}
+#'   \item{status}{Status}
+#'   \item{classe}{Class type name}
+#'   \item{assunto}{Theme}
+#'   \item{foro}{Forum}
+#'   \item{juiz}{Judge's name}
+#'   \item{vara}{Court}
+#'   \item{distribuicao}{Distribution date}
+#'   \item{controle}{Control code}
+#'   \item{area}{Area}
+#'   \item{valor_da_acao}{Lawsuit value}
+#'   \item{digital}{Digital}
+#'   \item{partes}{Parties}
+#' }
+#'
+#'
+#' @examples
+#'
+#' summary(da_cpopg)
+'da_cpopg'
